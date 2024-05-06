@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ba7e31b4f3474ebbbee39a732d18835e" Name="Diagram1" ZoomLevel="39">
+        <EntityTypeShape EntityType="MedLaboratoryModel.Авторизация" Width="1.5" PointX="3" PointY="24.625" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Анализатор" Width="1.5" PointX="5.25" PointY="5.625" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Биоматериал" Width="1.5" PointX="0.75" PointY="16.75" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Должность" Width="1.5" PointX="1.5" PointY="13.75" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Другое" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Заказ" Width="1.5" PointX="3" PointY="9.125" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Используемый_материал" Width="1.5" PointX="3" PointY="21.25" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.История" Width="1.5" PointX="3" PointY="27.875" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Материал" Width="1.5" PointX="0.75" PointY="21.5" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Пользователи" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Работа_анализатора" Width="1.5" PointX="7.5" PointY="6.25" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Сданный_биоматериал" Width="1.5" PointX="3" PointY="16.625" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Статус" Width="1.5" PointX="0.75" PointY="9.5" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Страховая_компания" Width="1.5" PointX="0.75" PointY="26.875" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Счет_страховой" Width="1.5" PointX="8.25" PointY="9.375" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Тип_страхового_полиса" Width="1.5" PointX="0.75" PointY="24.625" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Услуга" Width="1.5" PointX="3" PointY="5.375" />
+        <EntityTypeShape EntityType="MedLaboratoryModel.Услуги_заказа" Width="1.5" PointX="5.25" PointY="8.375" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Авторизация_Пользователи" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Работа_анализатора_Анализатор" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Сданный_биоматериал_Биоматериал" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Пользователи_Должность" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Другое_Пользователи" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Другое_Страховая_компания" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Другое_Тип_страхового_полиса" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Заказ_Пользователи" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Заказ_Статус" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Счет_страховой_Заказ" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Услиги_заказа_Заказ" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Используемый_материал_Материал" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Услуги_заказа_Используемый_материал" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_История_Пользователи" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Счет_страховой_Пользователи" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Услуги_заказа_Сданный_биоматериал" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Услуги_заказа_Статус" />
+        <AssociationConnector Association="MedLaboratoryModel.FK_Услиги_заказа_Услуга" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
