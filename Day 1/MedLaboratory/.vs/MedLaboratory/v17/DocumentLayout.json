@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\laboratoryassistant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\laboratoryassistant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\autorisation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\autorisation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\laboratoryassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\laboratoryassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\autorisation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\autorisation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,68 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Model1.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Model1.edmx",
-              "RelativeDocumentMoniker": "MedLaboratory\\Model1.edmx",
-              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Model1.edmx [Diagram1]",
-              "RelativeToolTip": "MedLaboratory\\Model1.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-05-06T13:16:23.764Z",
-              "EditorCaption": " [Diagram1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Autorisation.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Autorisation.xaml.cs",
-              "RelativeDocumentMoniker": "MedLaboratory\\Autorisation.xaml.cs",
-              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Autorisation.xaml.cs",
-              "RelativeToolTip": "MedLaboratory\\Autorisation.xaml.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAawDcAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T11:17:23.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Autorisation.xaml",
-              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Autorisation.xaml",
-              "RelativeDocumentMoniker": "MedLaboratory\\Autorisation.xaml",
-              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Autorisation.xaml",
-              "RelativeToolTip": "MedLaboratory\\Autorisation.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-06T11:06:05.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LaboratoryAssistant.xaml",
-              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml",
-              "RelativeDocumentMoniker": "MedLaboratory\\LaboratoryAssistant.xaml",
-              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml",
-              "RelativeToolTip": "MedLaboratory\\LaboratoryAssistant.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-06T11:05:32.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LaboratoryAssistant.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml.cs",
-              "RelativeDocumentMoniker": "MedLaboratory\\LaboratoryAssistant.xaml.cs",
-              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml.cs",
-              "RelativeToolTip": "MedLaboratory\\LaboratoryAssistant.xaml.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAwwFsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T11:18:21.58Z",
-              "EditorCaption": ""
             }
           ]
         },

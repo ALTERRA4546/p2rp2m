@@ -14,18 +14,13 @@ namespace MedLaboratory
     
     public partial class Сданный_биоматериал
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Сданный_биоматериал()
-        {
-            this.Услуги_заказа = new HashSet<Услуги_заказа>();
-        }
-    
         public int Код_сданного_биоматериала { get; set; }
+        public Nullable<int> Код_услуги_заказа { get; set; }
         public Nullable<int> Код_биоматериала { get; set; }
         public Nullable<double> Количество { get; set; }
+        public Nullable<System.DateTime> Время_сдачи { get; set; }
     
         public virtual Биоматериал Биоматериал { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Услуги_заказа> Услуги_заказа { get; set; }
+        public virtual Услуги_заказа Услуги_заказа { get; set; }
     }
 }

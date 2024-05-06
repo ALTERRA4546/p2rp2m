@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedLaboratory"
         mc:Ignorable="d"
-        Title="LaboratoryAssistant" Height="720" Width="1280">
+        Title="Лаборант" Height="720" Width="1280" Closing="Window_Closing">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
             <Rectangle HorizontalAlignment="Center" Height="700" Width="1260" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Rectangle HorizontalAlignment="Center" Height="50" Width="1260" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
-                <Label Content="Главное окно" Margin="10,0,10,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">
+                    <Image Height="40" Width="40" Source="/logo.png"/>
+                    <Label Content="Главное окно" Margin="10,0,10,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </WrapPanel>
                 <WrapPanel Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Image x:Name="photo" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40"/>
                     <Label x:Name="fio" Content="Иванов Иван" Margin="10,0,20,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
@@ -20,7 +23,13 @@
                 </WrapPanel>
             </Grid>
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,60,10,10">
-                <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                <StackPanel>
+                    <DataGrid x:Name="dgrid" Margin="0,0,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" Width="1240" Height="400"/>
+                    <WrapPanel>
+                        <Button Content="Принять биоматериал" HorizontalAlignment="Left" Margin="0,0,10,0" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click"/>
+                        <Button Content="Сформировать отчет" HorizontalAlignment="Left" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click_1"/>
+                    </WrapPanel>
+                </StackPanel>
             </Grid>
         </Grid>
     </Grid>

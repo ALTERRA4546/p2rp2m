@@ -24,7 +24,6 @@ namespace MedLaboratory
         public string Наименование { get; set; }
         public Nullable<decimal> Стоимость { get; set; }
         public Nullable<int> Срок_выполнения { get; set; }
-        public Nullable<double> Среднее_отклонение { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Услуги_заказа> Услуги_заказа { get; set; }

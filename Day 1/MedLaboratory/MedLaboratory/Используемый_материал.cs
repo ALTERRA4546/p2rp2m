@@ -14,18 +14,12 @@ namespace MedLaboratory
     
     public partial class Используемый_материал
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Используемый_материал()
-        {
-            this.Услуги_заказа = new HashSet<Услуги_заказа>();
-        }
-    
         public int Код_используемого_материала { get; set; }
+        public Nullable<int> Код_услуги_заказа { get; set; }
         public Nullable<int> Код_материала { get; set; }
         public Nullable<int> Количество { get; set; }
     
         public virtual Материал Материал { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Услуги_заказа> Услуги_заказа { get; set; }
+        public virtual Услуги_заказа Услуги_заказа { get; set; }
     }
 }

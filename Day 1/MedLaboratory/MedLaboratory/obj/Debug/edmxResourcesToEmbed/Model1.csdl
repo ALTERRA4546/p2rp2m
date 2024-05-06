@@ -67,9 +67,9 @@
       <End Role="Материал" EntitySet="Материал" />
       <End Role="Используемый_материал" EntitySet="Используемый_материал" />
     </AssociationSet>
-    <AssociationSet Name="FK_Услуги_заказа_Используемый_материал" Association="MedLaboratoryModel.FK_Услуги_заказа_Используемый_материал">
-      <End Role="Используемый_материал" EntitySet="Используемый_материал" />
+    <AssociationSet Name="FK_Используемый_материал_Услуги_заказа" Association="MedLaboratoryModel.FK_Используемый_материал_Услуги_заказа">
       <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
+      <End Role="Используемый_материал" EntitySet="Используемый_материал" />
     </AssociationSet>
     <AssociationSet Name="FK_История_Пользователи" Association="MedLaboratoryModel.FK_История_Пользователи">
       <End Role="Пользователи" EntitySet="Пользователи" />
@@ -79,13 +79,13 @@
       <End Role="Пользователи" EntitySet="Пользователи" />
       <End Role="Счет_страховой" EntitySet="Счет_страховой" />
     </AssociationSet>
-    <AssociationSet Name="FK_Работа_анализатора_Услуги_заказа" Association="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа">
+    <AssociationSet Name="FK_Работа_анализатора_Услуги_заказа1" Association="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа1">
       <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
       <End Role="Работа_анализатора" EntitySet="Работа_анализатора" />
     </AssociationSet>
-    <AssociationSet Name="FK_Услуги_заказа_Сданный_биоматериал" Association="MedLaboratoryModel.FK_Услуги_заказа_Сданный_биоматериал">
-      <End Role="Сданный_биоматериал" EntitySet="Сданный_биоматериал" />
+    <AssociationSet Name="FK_Сданный_биоматериал_Услуги_заказа" Association="MedLaboratoryModel.FK_Сданный_биоматериал_Услуги_заказа">
       <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
+      <End Role="Сданный_биоматериал" EntitySet="Сданный_биоматериал" />
     </AssociationSet>
     <AssociationSet Name="FK_Услуги_заказа_Статус" Association="MedLaboratoryModel.FK_Услуги_заказа_Статус">
       <End Role="Статус" EntitySet="Статус" />
@@ -168,10 +168,11 @@
       <PropertyRef Name="Код_используемого_материала" />
     </Key>
     <Property Name="Код_используемого_материала" Type="Int32" Nullable="false" />
+    <Property Name="Код_услуги_заказа" Type="Int32" />
     <Property Name="Код_материала" Type="Int32" />
     <Property Name="Количество" Type="Int32" />
     <NavigationProperty Name="Материал" Relationship="MedLaboratoryModel.FK_Используемый_материал_Материал" FromRole="Используемый_материал" ToRole="Материал" />
-    <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услуги_заказа_Используемый_материал" FromRole="Используемый_материал" ToRole="Услуги_заказа" />
+    <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Используемый_материал_Услуги_заказа" FromRole="Используемый_материал" ToRole="Услуги_заказа" />
   </EntityType>
   <EntityType Name="История">
     <Key>
@@ -200,35 +201,37 @@
     <Property Name="Фамилия" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Имя" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Отчество" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Фотография" Type="Binary" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="Авторизация" Relationship="MedLaboratoryModel.FK_Авторизация_Пользователи" FromRole="Пользователи" ToRole="Авторизация" />
     <NavigationProperty Name="Должность" Relationship="MedLaboratoryModel.FK_Пользователи_Должность" FromRole="Пользователи" ToRole="Должность" />
     <NavigationProperty Name="Другое" Relationship="MedLaboratoryModel.FK_Другое_Пользователи" FromRole="Пользователи" ToRole="Другое" />
     <NavigationProperty Name="Заказ" Relationship="MedLaboratoryModel.FK_Заказ_Пользователи" FromRole="Пользователи" ToRole="Заказ" />
     <NavigationProperty Name="История" Relationship="MedLaboratoryModel.FK_История_Пользователи" FromRole="Пользователи" ToRole="История" />
     <NavigationProperty Name="Счет_страховой" Relationship="MedLaboratoryModel.FK_Счет_страховой_Пользователи" FromRole="Пользователи" ToRole="Счет_страховой" />
-    <Property Name="Фотография" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Работа_анализатора">
     <Key>
       <PropertyRef Name="Код_работы_анализватора" />
     </Key>
-    <Property Name="Код_работы_анализватора" Type="Int32" Nullable="false" />
-    <Property Name="Код__услуги_заказа" Type="Int32" />
+    <Property Name="Код_работы_анализватора" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Код_услуги_заказа" Type="Int32" />
     <Property Name="Код_анализатора" Type="Int32" />
     <Property Name="Дата_и_время_поступления_заказа" Type="DateTime" Precision="3" />
     <Property Name="Дата_и_время_выполнения_услуги" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Анализатор" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Анализатор" FromRole="Работа_анализатора" ToRole="Анализатор" />
-    <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа" FromRole="Работа_анализатора" ToRole="Услуги_заказа" />
+    <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа1" FromRole="Работа_анализатора" ToRole="Услуги_заказа" />
   </EntityType>
   <EntityType Name="Сданный_биоматериал">
     <Key>
       <PropertyRef Name="Код_сданного_биоматериала" />
     </Key>
-    <Property Name="Код_сданного_биоматериала" Type="Int32" Nullable="false" />
+    <Property Name="Код_сданного_биоматериала" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Код_услуги_заказа" Type="Int32" />
     <Property Name="Код_биоматериала" Type="Int32" />
     <Property Name="Количество" Type="Double" />
+    <Property Name="Время_сдачи" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Биоматериал" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Биоматериал" FromRole="Сданный_биоматериал" ToRole="Биоматериал" />
-    <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услуги_заказа_Сданный_биоматериал" FromRole="Сданный_биоматериал" ToRole="Услуги_заказа" />
+    <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Услуги_заказа" FromRole="Сданный_биоматериал" ToRole="Услуги_заказа" />
   </EntityType>
   <EntityType Name="Статус">
     <Key>
@@ -278,7 +281,6 @@
     <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Стоимость" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="Срок_выполнения" Type="Int32" />
-    <Property Name="Среднее_отклонение" Type="Double" />
     <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Услуга" FromRole="Услуга" ToRole="Услуги_заказа" />
   </EntityType>
   <EntityType Name="Услуги_заказа">
@@ -293,12 +295,10 @@
     <Property Name="Результат" Type="Double" />
     <Property Name="Код_сотрудника" Type="Int32" />
     <Property Name="Среднее_отклонение" Type="Double" />
-    <Property Name="Код_сданного_биоматериала" Type="Int32" />
-    <Property Name="Код_используемого_материала" Type="Int32" />
     <NavigationProperty Name="Заказ" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Заказ" FromRole="Услуги_заказа" ToRole="Заказ" />
-    <NavigationProperty Name="Используемый_материал" Relationship="MedLaboratoryModel.FK_Услуги_заказа_Используемый_материал" FromRole="Услуги_заказа" ToRole="Используемый_материал" />
-    <NavigationProperty Name="Работа_анализатора" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа" FromRole="Услуги_заказа" ToRole="Работа_анализатора" />
-    <NavigationProperty Name="Сданный_биоматериал" Relationship="MedLaboratoryModel.FK_Услуги_заказа_Сданный_биоматериал" FromRole="Услуги_заказа" ToRole="Сданный_биоматериал" />
+    <NavigationProperty Name="Используемый_материал" Relationship="MedLaboratoryModel.FK_Используемый_материал_Услуги_заказа" FromRole="Услуги_заказа" ToRole="Используемый_материал" />
+    <NavigationProperty Name="Работа_анализатора" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа1" FromRole="Услуги_заказа" ToRole="Работа_анализатора" />
+    <NavigationProperty Name="Сданный_биоматериал" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Услуги_заказа" FromRole="Услуги_заказа" ToRole="Сданный_биоматериал" />
     <NavigationProperty Name="Статус" Relationship="MedLaboratoryModel.FK_Услуги_заказа_Статус" FromRole="Услуги_заказа" ToRole="Статус" />
     <NavigationProperty Name="Услуга" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Услуга" FromRole="Услуги_заказа" ToRole="Услуга" />
   </EntityType>
@@ -446,15 +446,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Услуги_заказа_Используемый_материал">
-    <End Type="MedLaboratoryModel.Используемый_материал" Role="Используемый_материал" Multiplicity="0..1" />
-    <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="*" />
+  <Association Name="FK_Используемый_материал_Услуги_заказа">
+    <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="0..1" />
+    <End Type="MedLaboratoryModel.Используемый_материал" Role="Используемый_материал" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Используемый_материал">
-        <PropertyRef Name="Код_используемого_материала" />
+      <Principal Role="Услуги_заказа">
+        <PropertyRef Name="Код_услуги_заказа" />
       </Principal>
-      <Dependent Role="Услуги_заказа">
-        <PropertyRef Name="Код_используемого_материала" />
+      <Dependent Role="Используемый_материал">
+        <PropertyRef Name="Код_услуги_заказа" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -482,7 +482,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Работа_анализатора_Услуги_заказа">
+  <Association Name="FK_Работа_анализатора_Услуги_заказа1">
     <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="0..1" />
     <End Type="MedLaboratoryModel.Работа_анализатора" Role="Работа_анализатора" Multiplicity="*" />
     <ReferentialConstraint>
@@ -490,19 +490,19 @@
         <PropertyRef Name="Код_услуги_заказа" />
       </Principal>
       <Dependent Role="Работа_анализатора">
-        <PropertyRef Name="Код__услуги_заказа" />
+        <PropertyRef Name="Код_услуги_заказа" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Услуги_заказа_Сданный_биоматериал">
-    <End Type="MedLaboratoryModel.Сданный_биоматериал" Role="Сданный_биоматериал" Multiplicity="0..1" />
-    <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="*" />
+  <Association Name="FK_Сданный_биоматериал_Услуги_заказа">
+    <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="0..1" />
+    <End Type="MedLaboratoryModel.Сданный_биоматериал" Role="Сданный_биоматериал" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Сданный_биоматериал">
-        <PropertyRef Name="Код_сданного_биоматериала" />
+      <Principal Role="Услуги_заказа">
+        <PropertyRef Name="Код_услуги_заказа" />
       </Principal>
-      <Dependent Role="Услуги_заказа">
-        <PropertyRef Name="Код_сданного_биоматериала" />
+      <Dependent Role="Сданный_биоматериал">
+        <PropertyRef Name="Код_услуги_заказа" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

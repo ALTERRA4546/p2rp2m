@@ -68,6 +68,7 @@
         <MappingFragment StoreEntitySet="Используемый материал">
           <ScalarProperty Name="Количество" ColumnName="Количество" />
           <ScalarProperty Name="Код_материала" ColumnName="Код материала" />
+          <ScalarProperty Name="Код_услуги_заказа" ColumnName="Код услуги заказа" />
           <ScalarProperty Name="Код_используемого_материала" ColumnName="Код используемого материала" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -108,7 +109,7 @@
           <ScalarProperty Name="Дата_и_время_выполнения_услуги" ColumnName="Дата и время выполнения услуги" />
           <ScalarProperty Name="Дата_и_время_поступления_заказа" ColumnName="Дата и время поступления заказа" />
           <ScalarProperty Name="Код_анализатора" ColumnName="Код анализатора" />
-          <ScalarProperty Name="Код__услуги_заказа" ColumnName="Код  услуги заказа" />
+          <ScalarProperty Name="Код_услуги_заказа" ColumnName="Код услуги заказа" />
           <ScalarProperty Name="Код_работы_анализватора" ColumnName="Код работы анализватора" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -116,8 +117,10 @@
     <EntitySetMapping Name="Сданный_биоматериал">
       <EntityTypeMapping TypeName="MedLaboratoryModel.Сданный_биоматериал">
         <MappingFragment StoreEntitySet="Сданный биоматериал">
+          <ScalarProperty Name="Время_сдачи" ColumnName="Время сдачи" />
           <ScalarProperty Name="Количество" ColumnName="Количество" />
           <ScalarProperty Name="Код_биоматериала" ColumnName="Код биоматериала" />
+          <ScalarProperty Name="Код_услуги_заказа" ColumnName="Код услуги заказа" />
           <ScalarProperty Name="Код_сданного_биоматериала" ColumnName="Код сданного биоматериала" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -163,7 +166,6 @@
     <EntitySetMapping Name="Услуга">
       <EntityTypeMapping TypeName="MedLaboratoryModel.Услуга">
         <MappingFragment StoreEntitySet="Услуга">
-          <ScalarProperty Name="Среднее_отклонение" ColumnName="Среднее отклонение" />
           <ScalarProperty Name="Срок_выполнения" ColumnName="Срок выполнения" />
           <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
           <ScalarProperty Name="Наименование" ColumnName="Наименование" />
@@ -174,8 +176,6 @@
     <EntitySetMapping Name="Услуги_заказа">
       <EntityTypeMapping TypeName="MedLaboratoryModel.Услуги_заказа">
         <MappingFragment StoreEntitySet="Услуги заказа">
-          <ScalarProperty Name="Код_используемого_материала" ColumnName="Код используемого материала" />
-          <ScalarProperty Name="Код_сданного_биоматериала" ColumnName="Код сданного биоматериала" />
           <ScalarProperty Name="Среднее_отклонение" ColumnName="Среднее отклонение" />
           <ScalarProperty Name="Код_сотрудника" ColumnName="Код сотрудника" />
           <ScalarProperty Name="Результат" ColumnName="Результат" />

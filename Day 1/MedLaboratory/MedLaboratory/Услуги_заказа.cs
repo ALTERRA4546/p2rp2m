@@ -17,7 +17,9 @@ namespace MedLaboratory
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Услуги_заказа()
         {
+            this.Используемый_материал = new HashSet<Используемый_материал>();
             this.Работа_анализатора = new HashSet<Работа_анализатора>();
+            this.Сданный_биоматериал = new HashSet<Сданный_биоматериал>();
         }
     
         public int Код_услуги_заказа { get; set; }
@@ -28,14 +30,14 @@ namespace MedLaboratory
         public Nullable<double> Результат { get; set; }
         public Nullable<int> Код_сотрудника { get; set; }
         public Nullable<double> Среднее_отклонение { get; set; }
-        public Nullable<int> Код_сданного_биоматериала { get; set; }
-        public Nullable<int> Код_используемого_материала { get; set; }
     
         public virtual Заказ Заказ { get; set; }
-        public virtual Используемый_материал Используемый_материал { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Используемый_материал> Используемый_материал { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Работа_анализатора> Работа_анализатора { get; set; }
-        public virtual Сданный_биоматериал Сданный_биоматериал { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Сданный_биоматериал> Сданный_биоматериал { get; set; }
         public virtual Статус Статус { get; set; }
         public virtual Услуга Услуга { get; set; }
     }
