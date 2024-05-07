@@ -11,7 +11,10 @@
             <Rectangle HorizontalAlignment="Center" Height="190" Width="400" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Rectangle HorizontalAlignment="Center" Height="50" Width="400" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
-                <Label Content="Авторизация" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">
+                    <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Center" Width="40" Source="/logo.png"/>
+                    <Label Content="Авторизация" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </WrapPanel>
             </Grid>
             <Grid Margin="10,60,10,10">
                 <StackPanel>
@@ -25,9 +28,9 @@
                             <PasswordBox x:Name="passwordH" PasswordChanged="passwordH_PasswordChanged"  HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="260" FontFamily="Comic Sans MS" FontSize="16"/>
                             <TextBox x:Name="passwordV" TextChanged="passwordV_TextChanged" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,0,0,0" VerticalAlignment="Center" Width="260" FontFamily="Comic Sans MS" FontSize="16"/>
                         </Grid>
-                        <Button Content="!" Margin="5,0,0,0" Height="24" Width="32" Click="Button_Click_1"/>
+                        <Button Content="!" Margin="5,0,0,0" Height="24" Width="32" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Click="Button_Click_1"/>
                     </WrapPanel>
-                    <Button Content="Авторизация" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Click="Button_Click"/>
+                    <Button x:Name="enter" Content="Авторизация" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Click="Button_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>

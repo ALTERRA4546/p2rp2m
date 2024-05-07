@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace MedLaboratory
 {
@@ -24,14 +25,22 @@ namespace MedLaboratory
     /// </summary>
     public partial class Autorisation : Window
     {
+        private DispatcherTimer timer;
+        public int second = 10;
+        public bool closeApp = true;
+
         public Autorisation()
         {
             InitializeComponent();
 
             passwordV.Visibility = Visibility.Collapsed;
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += OnTimedEvent;
         }
 
         public bool passwordVisability = false;
+        public int tryer = 0;
 
         public static class userData
         { 
@@ -39,10 +48,33 @@ namespace MedLaboratory
             public static int idOrder { get; set; }
             public static int idIspolMater { get; set; }
             public static int idReport { get; set; }
+            public static bool checkCapcha { get;set; }
+        }
+
+        private void OnTimedEvent(object sender, EventArgs e)
+        {
+            if (second <= 0)
+            {
+                userData.checkCapcha = false;
+                enter.IsEnabled = true;
+                enter.Content = "Авторизация";
+                tryer = 1;
+                timer.Stop();
+                return;
+            }
+            enter.Content = second;
+            second--;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (tryer >= 1)
+            {
+                Capcha cp = new Capcha();
+                userData.checkCapcha = true;
+                cp.ShowDialog();
+            }
+
             if (login.Text == "" || passwordH.Password == "")
             {
                 MessageBox.Show("Заполните поля");
@@ -100,7 +132,16 @@ namespace MedLaboratory
                 }
                 else
                 {
+                    if (!userData.checkCapcha && tryer >= 1)
+                    {
+                        MessageBox.Show("Система заблокированна на 10 секунд");
+                        second = 10;
+                        timer.Start();
+                        enter.IsEnabled = false;
+                        return;
+                    }
                     MessageBox.Show("Логин или пароль указаны неверно");
+                    tryer++;
                     return;
                 }
             }
