@@ -38,6 +38,7 @@ namespace MedLaboratory
             public static int idUser {  get; set; }
             public static int idOrder { get; set; }
             public static int idIspolMater { get; set; }
+            public static int idReport { get; set; }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

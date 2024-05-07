@@ -38,6 +38,8 @@ namespace MedLaboratory
             timer.Start();
         }
 
+        public bool closeApp = true;
+
         private void Initial()
         {
             exitTime.Content = hour + ":" + minutes;
@@ -126,12 +128,16 @@ namespace MedLaboratory
         {
             Autorisation a = new Autorisation();
             a.Show();
+            closeApp = false;
             this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Application.Current.Shutdown();
+            if (closeApp)
+            {
+                Application.Current.Shutdown();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

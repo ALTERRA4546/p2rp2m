@@ -27,6 +27,7 @@ namespace MedLaboratory
         private DispatcherTimer timer;
         public int minutes = 30;
         public int hour = 2;
+        public bool closeApp = true;
 
         public LaboratoryAssistant()
         {
@@ -127,12 +128,16 @@ namespace MedLaboratory
         {
             Autorisation a = new Autorisation();
             a.Show();
+            closeApp = false;
             this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Application.Current.Shutdown();
+            if (closeApp)
+            {
+                Application.Current.Shutdown();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -151,7 +156,17 @@ namespace MedLaboratory
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            if (dgrid.SelectedIndex < 0)
+            {
+                MessageBox.Show("Строка не была выбрана");
+                return;
+            }
+            DataGridRow row = (DataGridRow)dgrid.ItemContainerGenerator.ContainerFromIndex(dgrid.SelectedIndex);
+            DataGridCell cell = dgrid.Columns[1].GetCellContent(row).Parent as DataGridCell;
+            userData.idOrder = Convert.ToInt32(((TextBlock)cell.Content).Text);
+            userData.idReport = 1;
+            MultiReport co = new MultiReport();
+            co.ShowDialog();
         }
     }
 }

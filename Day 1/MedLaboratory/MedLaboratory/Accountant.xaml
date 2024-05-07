@@ -8,7 +8,7 @@
             Title="Бухгалтер" Height="720" Width="1280" Closing="Window_Closing">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-            <Rectangle HorizontalAlignment="Center" Height="700" Width="1260" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
+            <Rectangle HorizontalAlignment="Center" Height="660" Width="1260" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Rectangle HorizontalAlignment="Center" Height="50" Width="1260" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
                 <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">
@@ -24,8 +24,8 @@
             </Grid>
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,60,10,10">
                 <StackPanel>
-                    <DataGrid x:Name="dgrid" Margin="0,0,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" Width="1240" Height="400"/>
-                    <WrapPanel>
+                    <DataGrid x:Name="dgrid" Margin="0,0,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" Width="1240" Height="550"/>
+                    <WrapPanel HorizontalAlignment="Center">
                         <Button Content="Сформировать счет" HorizontalAlignment="Left" Margin="0,0,10,0" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click"/>
                         <Button Content="Сформировать отчет" HorizontalAlignment="Left" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click_1"/>
                     </WrapPanel>

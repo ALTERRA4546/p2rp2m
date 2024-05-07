@@ -27,6 +27,8 @@ namespace MedLaboratory
             Initial();
         }
 
+        public bool closeApp = true;
+
         private void Initial()
         {
             using (var bd = new MedLaboratoryEntities())
@@ -45,21 +47,19 @@ namespace MedLaboratory
 
                 var zakaz = from z in bd.Заказ
                             join
-                            us in bd.Услуги_заказа on z.Код_заказа equals us.Код_заказа
+                            stat in bd.Статус on z.Статус_заказа equals stat.Код_статуса
                             join
-                            usl in bd.Услуга on us.Код_услуг equals usl.Код_услуги
-                            join
-                            stat in bd.Статус on us.Код_статуса_услуги equals stat.Код_статуса
-                            join
-                            sotr in bd.Пользователи on us.Код_сотрудника equals sotr.Код_пользователя
+                            sotr in bd.Пользователи on z.Код_пациент equals sotr.Код_пользователя
                             select new
                             {
                                 z.Код_заказа,
-                                z.Код_пациент,
-                                Статус = stat.Наименование,
+                                sotr.Фамилия,
+                                sotr.Имя,
+                                sotr.Отчество,
+                                Статус = stat.Наименование
                             };
 
-                dgrid.ItemsSource = zakaz.ToList().GroupBy(g=>g.Код_заказа);
+                dgrid.ItemsSource = zakaz.ToList();
             }
         }
 
@@ -67,12 +67,16 @@ namespace MedLaboratory
         {
             Autorisation a = new Autorisation();
             a.Show();
+            closeApp = false;
             this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Application.Current.Shutdown();
+            if (closeApp)
+            {
+                Application.Current.Shutdown();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -91,7 +95,17 @@ namespace MedLaboratory
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            if (dgrid.SelectedIndex < 0)
+            {
+                MessageBox.Show("Строка не была выбрана");
+                return;
+            }
+            DataGridRow row = (DataGridRow)dgrid.ItemContainerGenerator.ContainerFromIndex(dgrid.SelectedIndex);
+            DataGridCell cell = dgrid.Columns[0].GetCellContent(row).Parent as DataGridCell;
+            userData.idOrder = Convert.ToInt32(((TextBlock)cell.Content).Text);
+            userData.idReport = 2;
+            MultiReport co = new MultiReport();
+            co.ShowDialog();
         }
     }
 }

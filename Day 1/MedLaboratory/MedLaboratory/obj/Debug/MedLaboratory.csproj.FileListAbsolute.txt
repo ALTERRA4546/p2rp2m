@@ -40,3 +40,5 @@ C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MaterialСonsu
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MaterialСonsumption.baml
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MaterialСonsumptionMain.g.cs
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MaterialСonsumptionMain.baml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MultiReport.g.cs
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MultiReport.baml

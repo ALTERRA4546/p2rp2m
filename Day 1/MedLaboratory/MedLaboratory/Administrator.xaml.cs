@@ -26,6 +26,7 @@ namespace MedLaboratory
             InitializeComponent();
             Initial();
         }
+        public bool closeApp = true;
 
         private void Initial()
         {
@@ -75,12 +76,16 @@ namespace MedLaboratory
         {
             Autorisation a = new Autorisation();
             a.Show();
+            closeApp = false;
             this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Application.Current.Shutdown();
+            if (closeApp)
+            {
+                Application.Current.Shutdown();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -105,7 +110,17 @@ namespace MedLaboratory
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
+            if (dgrid.SelectedIndex < 0)
+            {
+                MessageBox.Show("Строка не была выбрана");
+                return;
+            }
+            DataGridRow row = (DataGridRow)dgrid.ItemContainerGenerator.ContainerFromIndex(dgrid.SelectedIndex);
+            DataGridCell cell = dgrid.Columns[0].GetCellContent(row).Parent as DataGridCell;
+            userData.idOrder = Convert.ToInt32(((TextBlock)cell.Content).Text);
+            userData.idReport = 3;
+            MultiReport co = new MultiReport();
+            co.ShowDialog();
         }
     }
 }
