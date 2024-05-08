@@ -1,0 +1,1258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище MedLaboratoryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Авторизация">
+          <Key>
+            <PropertyRef Name="Код авторизации" />
+          </Key>
+          <Property Name="Код авторизации" Type="int" Nullable="false" />
+          <Property Name="Код пользователя" Type="int" />
+          <Property Name="Логин" Type="nvarchar" MaxLength="250" />
+          <Property Name="Пароль" Type="nvarchar" MaxLength="250" />
+          <Property Name="IP-Адрес" Type="nvarchar" MaxLength="250" />
+          <Property Name="Дата и время последнего входа" Type="datetime" />
+          <Property Name="Время блокировки" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Анализатор">
+          <Key>
+            <PropertyRef Name="Код анализатора" />
+          </Key>
+          <Property Name="Код анализатора" Type="int" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Биоматериал">
+          <Key>
+            <PropertyRef Name="Код биоматериала" />
+          </Key>
+          <Property Name="Код биоматериала" Type="int" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Должность">
+          <Key>
+            <PropertyRef Name="Код должности" />
+          </Key>
+          <Property Name="Код должности" Type="int" Nullable="false" />
+          <Property Name="Название" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Другое">
+          <Key>
+            <PropertyRef Name="Код другого" />
+          </Key>
+          <Property Name="Код другого" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код пользователя" Type="int" />
+          <Property Name="Серия паспорта" Type="int" />
+          <Property Name="Номер паспорта" Type="int" />
+          <Property Name="Телефон" Type="nvarchar" MaxLength="18" />
+          <Property Name="E-mail" Type="nvarchar" MaxLength="250" />
+          <Property Name="Номер страхового полиса" Type="int" />
+          <Property Name="Код типа страхового полиса" Type="int" />
+          <Property Name="Код страховой компании" Type="int" />
+          <Property Name="Дата рождения" Type="date" />
+        </EntityType>
+        <EntityType Name="Заказ">
+          <Key>
+            <PropertyRef Name="Код заказа" />
+          </Key>
+          <Property Name="Код заказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код пациент" Type="int" />
+          <Property Name="Статус заказа" Type="int" />
+          <Property Name="Время выполнения заказа" Type="int" />
+          <Property Name="Время заказа" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Используемый материал">
+          <Key>
+            <PropertyRef Name="Код используемого материала" />
+          </Key>
+          <Property Name="Код используемого материала" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код услуги заказа" Type="int" />
+          <Property Name="Код материала" Type="int" />
+          <Property Name="Количество" Type="int" />
+        </EntityType>
+        <EntityType Name="История">
+          <Key>
+            <PropertyRef Name="Код истории" />
+          </Key>
+          <Property Name="Код истории" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код пользователя" Type="int" />
+          <Property Name="Дата и время входа" Type="datetime" />
+          <Property Name="IP-адрес" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Материал">
+          <Key>
+            <PropertyRef Name="Код материала" />
+          </Key>
+          <Property Name="Код материала" Type="int" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Пользователи">
+          <Key>
+            <PropertyRef Name="Код пользователя" />
+          </Key>
+          <Property Name="Код пользователя" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код должности" Type="int" />
+          <Property Name="Фамилия" Type="nvarchar" MaxLength="250" />
+          <Property Name="Имя" Type="nvarchar" MaxLength="250" />
+          <Property Name="Отчество" Type="nvarchar" MaxLength="250" />
+          <Property Name="Фотография" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Работа анализатора">
+          <Key>
+            <PropertyRef Name="Код работы анализватора" />
+          </Key>
+          <Property Name="Код работы анализватора" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код услуги заказа" Type="int" />
+          <Property Name="Код анализатора" Type="int" />
+          <Property Name="Дата и время поступления заказа" Type="datetime" />
+          <Property Name="Дата и время выполнения услуги" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Сданный биоматериал">
+          <Key>
+            <PropertyRef Name="Код сданного биоматериала" />
+          </Key>
+          <Property Name="Код сданного биоматериала" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код услуги заказа" Type="int" />
+          <Property Name="Код биоматериала" Type="int" />
+          <Property Name="Количество" Type="float" />
+          <Property Name="Время сдачи" Type="datetime" />
+          <Property Name="Код пробирки" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Статус">
+          <Key>
+            <PropertyRef Name="Код статуса" />
+          </Key>
+          <Property Name="Код статуса" Type="int" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Страховая компания">
+          <Key>
+            <PropertyRef Name="Код страховой компании" />
+          </Key>
+          <Property Name="Код страховой компании" Type="int" Nullable="false" />
+          <Property Name="Название" Type="nvarchar" MaxLength="250" />
+          <Property Name="Адрес" Type="nvarchar" MaxLength="250" />
+          <Property Name="ИНН" Type="bigint" />
+          <Property Name="Расчётный счёт" Type="bigint" />
+          <Property Name="БИК" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Счет страховой">
+          <Key>
+            <PropertyRef Name="Код счета страховой" />
+          </Key>
+          <Property Name="Код счета страховой" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код бухгалтера" Type="int" />
+          <Property Name="Код заказа" Type="int" />
+          <Property Name="Сумма" Type="money" />
+        </EntityType>
+        <EntityType Name="Тип страхового полиса">
+          <Key>
+            <PropertyRef Name="Код типа страхового полиса" />
+          </Key>
+          <Property Name="Код типа страхового полиса" Type="int" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Услуга">
+          <Key>
+            <PropertyRef Name="Код услуги" />
+          </Key>
+          <Property Name="Код услуги" Type="int" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="250" />
+          <Property Name="Стоимость" Type="money" />
+          <Property Name="Срок выполнения" Type="int" />
+        </EntityType>
+        <EntityType Name="Услуги заказа">
+          <Key>
+            <PropertyRef Name="Код услуги заказа" />
+          </Key>
+          <Property Name="Код услуги заказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код заказа" Type="int" />
+          <Property Name="Код услуг" Type="int" />
+          <Property Name="Код статуса услуги" Type="int" />
+          <Property Name="Дата и время выполнения" Type="datetime" />
+          <Property Name="Результат" Type="float" />
+          <Property Name="Код сотрудника" Type="int" />
+          <Property Name="Среднее отклонение" Type="float" />
+        </EntityType>
+        <Association Name="FK_Авторизация_Пользователи">
+          <End Role="Пользователи" Type="Self.Пользователи" Multiplicity="0..1" />
+          <End Role="Авторизация" Type="Self.Авторизация" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код пользователя" />
+            </Principal>
+            <Dependent Role="Авторизация">
+              <PropertyRef Name="Код пользователя" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Другое_Пользователи">
+          <End Role="Пользователи" Type="Self.Пользователи" Multiplicity="0..1" />
+          <End Role="Другое" Type="Self.Другое" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код пользователя" />
+            </Principal>
+            <Dependent Role="Другое">
+              <PropertyRef Name="Код пользователя" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Другое_Страховая компания">
+          <End Role="Страховая компания" Type="Self.Страховая компания" Multiplicity="0..1" />
+          <End Role="Другое" Type="Self.Другое" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Страховая компания">
+              <PropertyRef Name="Код страховой компании" />
+            </Principal>
+            <Dependent Role="Другое">
+              <PropertyRef Name="Код страховой компании" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Другое_Тип страхового полиса">
+          <End Role="Тип страхового полиса" Type="Self.Тип страхового полиса" Multiplicity="0..1" />
+          <End Role="Другое" Type="Self.Другое" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Тип страхового полиса">
+              <PropertyRef Name="Код типа страхового полиса" />
+            </Principal>
+            <Dependent Role="Другое">
+              <PropertyRef Name="Код типа страхового полиса" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Заказ_Пользователи">
+          <End Role="Пользователи" Type="Self.Пользователи" Multiplicity="0..1" />
+          <End Role="Заказ" Type="Self.Заказ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код пользователя" />
+            </Principal>
+            <Dependent Role="Заказ">
+              <PropertyRef Name="Код пациент" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Заказ_Статус">
+          <End Role="Статус" Type="Self.Статус" Multiplicity="0..1" />
+          <End Role="Заказ" Type="Self.Заказ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Статус">
+              <PropertyRef Name="Код статуса" />
+            </Principal>
+            <Dependent Role="Заказ">
+              <PropertyRef Name="Статус заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Используемый материал_Материал">
+          <End Role="Материал" Type="Self.Материал" Multiplicity="0..1" />
+          <End Role="Используемый материал" Type="Self.Используемый материал" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Материал">
+              <PropertyRef Name="Код материала" />
+            </Principal>
+            <Dependent Role="Используемый материал">
+              <PropertyRef Name="Код материала" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Используемый материал_Услуги заказа">
+          <End Role="Услуги заказа" Type="Self.Услуги заказа" Multiplicity="0..1" />
+          <End Role="Используемый материал" Type="Self.Используемый материал" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуги заказа">
+              <PropertyRef Name="Код услуги заказа" />
+            </Principal>
+            <Dependent Role="Используемый материал">
+              <PropertyRef Name="Код услуги заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_История_Пользователи">
+          <End Role="Пользователи" Type="Self.Пользователи" Multiplicity="0..1" />
+          <End Role="История" Type="Self.История" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код пользователя" />
+            </Principal>
+            <Dependent Role="История">
+              <PropertyRef Name="Код пользователя" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Пользователи_Должность">
+          <End Role="Должность" Type="Self.Должность" Multiplicity="0..1" />
+          <End Role="Пользователи" Type="Self.Пользователи" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Должность">
+              <PropertyRef Name="Код должности" />
+            </Principal>
+            <Dependent Role="Пользователи">
+              <PropertyRef Name="Код должности" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Работа анализатора_Анализатор">
+          <End Role="Анализатор" Type="Self.Анализатор" Multiplicity="0..1" />
+          <End Role="Работа анализатора" Type="Self.Работа анализатора" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Анализатор">
+              <PropertyRef Name="Код анализатора" />
+            </Principal>
+            <Dependent Role="Работа анализатора">
+              <PropertyRef Name="Код анализатора" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Работа анализатора_Услуги заказа1">
+          <End Role="Услуги заказа" Type="Self.Услуги заказа" Multiplicity="0..1" />
+          <End Role="Работа анализатора" Type="Self.Работа анализатора" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуги заказа">
+              <PropertyRef Name="Код услуги заказа" />
+            </Principal>
+            <Dependent Role="Работа анализатора">
+              <PropertyRef Name="Код услуги заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Сданный биоматериал_Биоматериал">
+          <End Role="Биоматериал" Type="Self.Биоматериал" Multiplicity="0..1" />
+          <End Role="Сданный биоматериал" Type="Self.Сданный биоматериал" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Биоматериал">
+              <PropertyRef Name="Код биоматериала" />
+            </Principal>
+            <Dependent Role="Сданный биоматериал">
+              <PropertyRef Name="Код биоматериала" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Сданный биоматериал_Услуги заказа">
+          <End Role="Услуги заказа" Type="Self.Услуги заказа" Multiplicity="0..1" />
+          <End Role="Сданный биоматериал" Type="Self.Сданный биоматериал" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуги заказа">
+              <PropertyRef Name="Код услуги заказа" />
+            </Principal>
+            <Dependent Role="Сданный биоматериал">
+              <PropertyRef Name="Код услуги заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Счет страховой_Заказ">
+          <End Role="Заказ" Type="Self.Заказ" Multiplicity="0..1" />
+          <End Role="Счет страховой" Type="Self.Счет страховой" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Заказ">
+              <PropertyRef Name="Код заказа" />
+            </Principal>
+            <Dependent Role="Счет страховой">
+              <PropertyRef Name="Код заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Счет страховой_Пользователи">
+          <End Role="Пользователи" Type="Self.Пользователи" Multiplicity="0..1" />
+          <End Role="Счет страховой" Type="Self.Счет страховой" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код пользователя" />
+            </Principal>
+            <Dependent Role="Счет страховой">
+              <PropertyRef Name="Код бухгалтера" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Услиги заказа_Заказ">
+          <End Role="Заказ" Type="Self.Заказ" Multiplicity="0..1" />
+          <End Role="Услуги заказа" Type="Self.Услуги заказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Заказ">
+              <PropertyRef Name="Код заказа" />
+            </Principal>
+            <Dependent Role="Услуги заказа">
+              <PropertyRef Name="Код заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Услиги заказа_Услуга">
+          <End Role="Услуга" Type="Self.Услуга" Multiplicity="0..1" />
+          <End Role="Услуги заказа" Type="Self.Услуги заказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуга">
+              <PropertyRef Name="Код услуги" />
+            </Principal>
+            <Dependent Role="Услуги заказа">
+              <PropertyRef Name="Код услуг" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Услуги заказа_Статус">
+          <End Role="Статус" Type="Self.Статус" Multiplicity="0..1" />
+          <End Role="Услуги заказа" Type="Self.Услуги заказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Статус">
+              <PropertyRef Name="Код статуса" />
+            </Principal>
+            <Dependent Role="Услуги заказа">
+              <PropertyRef Name="Код статуса услуги" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище MedLaboratoryModelContainer">
+          <EntitySet Name="Авторизация" EntityType="Self.Авторизация" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Анализатор" EntityType="Self.Анализатор" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Биоматериал" EntityType="Self.Биоматериал" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Должность" EntityType="Self.Должность" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Другое" EntityType="Self.Другое" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Заказ" EntityType="Self.Заказ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Используемый материал" EntityType="Self.Используемый материал" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="История" EntityType="Self.История" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Материал" EntityType="Self.Материал" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Пользователи" EntityType="Self.Пользователи" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Работа анализатора" EntityType="Self.Работа анализатора" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Сданный биоматериал" EntityType="Self.Сданный биоматериал" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Статус" EntityType="Self.Статус" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Страховая компания" EntityType="Self.Страховая компания" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Счет страховой" EntityType="Self.Счет страховой" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Тип страхового полиса" EntityType="Self.Тип страхового полиса" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Услуга" EntityType="Self.Услуга" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Услуги заказа" EntityType="Self.Услуги заказа" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Авторизация_Пользователи" Association="Self.FK_Авторизация_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="Авторизация" EntitySet="Авторизация" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Другое_Пользователи" Association="Self.FK_Другое_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="Другое" EntitySet="Другое" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Другое_Страховая компания" Association="Self.FK_Другое_Страховая компания">
+            <End Role="Страховая компания" EntitySet="Страховая компания" />
+            <End Role="Другое" EntitySet="Другое" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Другое_Тип страхового полиса" Association="Self.FK_Другое_Тип страхового полиса">
+            <End Role="Тип страхового полиса" EntitySet="Тип страхового полиса" />
+            <End Role="Другое" EntitySet="Другое" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Заказ_Пользователи" Association="Self.FK_Заказ_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="Заказ" EntitySet="Заказ" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Заказ_Статус" Association="Self.FK_Заказ_Статус">
+            <End Role="Статус" EntitySet="Статус" />
+            <End Role="Заказ" EntitySet="Заказ" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Используемый материал_Материал" Association="Self.FK_Используемый материал_Материал">
+            <End Role="Материал" EntitySet="Материал" />
+            <End Role="Используемый материал" EntitySet="Используемый материал" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Используемый материал_Услуги заказа" Association="Self.FK_Используемый материал_Услуги заказа">
+            <End Role="Услуги заказа" EntitySet="Услуги заказа" />
+            <End Role="Используемый материал" EntitySet="Используемый материал" />
+          </AssociationSet>
+          <AssociationSet Name="FK_История_Пользователи" Association="Self.FK_История_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="История" EntitySet="История" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Пользователи_Должность" Association="Self.FK_Пользователи_Должность">
+            <End Role="Должность" EntitySet="Должность" />
+            <End Role="Пользователи" EntitySet="Пользователи" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Работа анализатора_Анализатор" Association="Self.FK_Работа анализатора_Анализатор">
+            <End Role="Анализатор" EntitySet="Анализатор" />
+            <End Role="Работа анализатора" EntitySet="Работа анализатора" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Работа анализатора_Услуги заказа1" Association="Self.FK_Работа анализатора_Услуги заказа1">
+            <End Role="Услуги заказа" EntitySet="Услуги заказа" />
+            <End Role="Работа анализатора" EntitySet="Работа анализатора" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Сданный биоматериал_Биоматериал" Association="Self.FK_Сданный биоматериал_Биоматериал">
+            <End Role="Биоматериал" EntitySet="Биоматериал" />
+            <End Role="Сданный биоматериал" EntitySet="Сданный биоматериал" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Сданный биоматериал_Услуги заказа" Association="Self.FK_Сданный биоматериал_Услуги заказа">
+            <End Role="Услуги заказа" EntitySet="Услуги заказа" />
+            <End Role="Сданный биоматериал" EntitySet="Сданный биоматериал" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Счет страховой_Заказ" Association="Self.FK_Счет страховой_Заказ">
+            <End Role="Заказ" EntitySet="Заказ" />
+            <End Role="Счет страховой" EntitySet="Счет страховой" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Счет страховой_Пользователи" Association="Self.FK_Счет страховой_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="Счет страховой" EntitySet="Счет страховой" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Услиги заказа_Заказ" Association="Self.FK_Услиги заказа_Заказ">
+            <End Role="Заказ" EntitySet="Заказ" />
+            <End Role="Услуги заказа" EntitySet="Услуги заказа" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Услиги заказа_Услуга" Association="Self.FK_Услиги заказа_Услуга">
+            <End Role="Услуга" EntitySet="Услуга" />
+            <End Role="Услуги заказа" EntitySet="Услуги заказа" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Услуги заказа_Статус" Association="Self.FK_Услуги заказа_Статус">
+            <End Role="Статус" EntitySet="Статус" />
+            <End Role="Услуги заказа" EntitySet="Услуги заказа" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MedLaboratoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MedLaboratoryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Авторизация" EntityType="MedLaboratoryModel.Авторизация" />
+          <EntitySet Name="Анализатор" EntityType="MedLaboratoryModel.Анализатор" />
+          <EntitySet Name="Биоматериал" EntityType="MedLaboratoryModel.Биоматериал" />
+          <EntitySet Name="Должность" EntityType="MedLaboratoryModel.Должность" />
+          <EntitySet Name="Другое" EntityType="MedLaboratoryModel.Другое" />
+          <EntitySet Name="Заказ" EntityType="MedLaboratoryModel.Заказ" />
+          <EntitySet Name="Используемый_материал" EntityType="MedLaboratoryModel.Используемый_материал" />
+          <EntitySet Name="История" EntityType="MedLaboratoryModel.История" />
+          <EntitySet Name="Материал" EntityType="MedLaboratoryModel.Материал" />
+          <EntitySet Name="Пользователи" EntityType="MedLaboratoryModel.Пользователи" />
+          <EntitySet Name="Работа_анализатора" EntityType="MedLaboratoryModel.Работа_анализатора" />
+          <EntitySet Name="Сданный_биоматериал" EntityType="MedLaboratoryModel.Сданный_биоматериал" />
+          <EntitySet Name="Статус" EntityType="MedLaboratoryModel.Статус" />
+          <EntitySet Name="Страховая_компания" EntityType="MedLaboratoryModel.Страховая_компания" />
+          <EntitySet Name="Счет_страховой" EntityType="MedLaboratoryModel.Счет_страховой" />
+          <EntitySet Name="Тип_страхового_полиса" EntityType="MedLaboratoryModel.Тип_страхового_полиса" />
+          <EntitySet Name="Услуга" EntityType="MedLaboratoryModel.Услуга" />
+          <EntitySet Name="Услуги_заказа" EntityType="MedLaboratoryModel.Услуги_заказа" />
+          <AssociationSet Name="FK_Авторизация_Пользователи" Association="MedLaboratoryModel.FK_Авторизация_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="Авторизация" EntitySet="Авторизация" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Работа_анализатора_Анализатор" Association="MedLaboratoryModel.FK_Работа_анализатора_Анализатор">
+            <End Role="Анализатор" EntitySet="Анализатор" />
+            <End Role="Работа_анализатора" EntitySet="Работа_анализатора" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Сданный_биоматериал_Биоматериал" Association="MedLaboratoryModel.FK_Сданный_биоматериал_Биоматериал">
+            <End Role="Биоматериал" EntitySet="Биоматериал" />
+            <End Role="Сданный_биоматериал" EntitySet="Сданный_биоматериал" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Пользователи_Должность" Association="MedLaboratoryModel.FK_Пользователи_Должность">
+            <End Role="Должность" EntitySet="Должность" />
+            <End Role="Пользователи" EntitySet="Пользователи" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Другое_Пользователи" Association="MedLaboratoryModel.FK_Другое_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="Другое" EntitySet="Другое" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Другое_Страховая_компания" Association="MedLaboratoryModel.FK_Другое_Страховая_компания">
+            <End Role="Страховая_компания" EntitySet="Страховая_компания" />
+            <End Role="Другое" EntitySet="Другое" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Другое_Тип_страхового_полиса" Association="MedLaboratoryModel.FK_Другое_Тип_страхового_полиса">
+            <End Role="Тип_страхового_полиса" EntitySet="Тип_страхового_полиса" />
+            <End Role="Другое" EntitySet="Другое" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Заказ_Пользователи" Association="MedLaboratoryModel.FK_Заказ_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="Заказ" EntitySet="Заказ" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Заказ_Статус" Association="MedLaboratoryModel.FK_Заказ_Статус">
+            <End Role="Статус" EntitySet="Статус" />
+            <End Role="Заказ" EntitySet="Заказ" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Счет_страховой_Заказ" Association="MedLaboratoryModel.FK_Счет_страховой_Заказ">
+            <End Role="Заказ" EntitySet="Заказ" />
+            <End Role="Счет_страховой" EntitySet="Счет_страховой" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Услиги_заказа_Заказ" Association="MedLaboratoryModel.FK_Услиги_заказа_Заказ">
+            <End Role="Заказ" EntitySet="Заказ" />
+            <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Используемый_материал_Материал" Association="MedLaboratoryModel.FK_Используемый_материал_Материал">
+            <End Role="Материал" EntitySet="Материал" />
+            <End Role="Используемый_материал" EntitySet="Используемый_материал" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Используемый_материал_Услуги_заказа" Association="MedLaboratoryModel.FK_Используемый_материал_Услуги_заказа">
+            <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
+            <End Role="Используемый_материал" EntitySet="Используемый_материал" />
+          </AssociationSet>
+          <AssociationSet Name="FK_История_Пользователи" Association="MedLaboratoryModel.FK_История_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="История" EntitySet="История" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Счет_страховой_Пользователи" Association="MedLaboratoryModel.FK_Счет_страховой_Пользователи">
+            <End Role="Пользователи" EntitySet="Пользователи" />
+            <End Role="Счет_страховой" EntitySet="Счет_страховой" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Работа_анализатора_Услуги_заказа1" Association="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа1">
+            <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
+            <End Role="Работа_анализатора" EntitySet="Работа_анализатора" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Сданный_биоматериал_Услуги_заказа" Association="MedLaboratoryModel.FK_Сданный_биоматериал_Услуги_заказа">
+            <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
+            <End Role="Сданный_биоматериал" EntitySet="Сданный_биоматериал" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Услуги_заказа_Статус" Association="MedLaboratoryModel.FK_Услуги_заказа_Статус">
+            <End Role="Статус" EntitySet="Статус" />
+            <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Услиги_заказа_Услуга" Association="MedLaboratoryModel.FK_Услиги_заказа_Услуга">
+            <End Role="Услуга" EntitySet="Услуга" />
+            <End Role="Услуги_заказа" EntitySet="Услуги_заказа" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Авторизация">
+          <Key>
+            <PropertyRef Name="Код_авторизации" />
+          </Key>
+          <Property Name="Код_авторизации" Type="Int32" Nullable="false" />
+          <Property Name="Код_пользователя" Type="Int32" />
+          <Property Name="Логин" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Пароль" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IP_Адрес" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Дата_и_время_последнего_входа" Type="DateTime" Precision="3" />
+          <Property Name="Время_блокировки" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Авторизация_Пользователи" FromRole="Авторизация" ToRole="Пользователи" />
+        </EntityType>
+        <EntityType Name="Анализатор">
+          <Key>
+            <PropertyRef Name="Код_анализатора" />
+          </Key>
+          <Property Name="Код_анализатора" Type="Int32" Nullable="false" />
+          <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Работа_анализатора" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Анализатор" FromRole="Анализатор" ToRole="Работа_анализатора" />
+        </EntityType>
+        <EntityType Name="Биоматериал">
+          <Key>
+            <PropertyRef Name="Код_биоматериала" />
+          </Key>
+          <Property Name="Код_биоматериала" Type="Int32" Nullable="false" />
+          <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Сданный_биоматериал" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Биоматериал" FromRole="Биоматериал" ToRole="Сданный_биоматериал" />
+        </EntityType>
+        <EntityType Name="Должность">
+          <Key>
+            <PropertyRef Name="Код_должности" />
+          </Key>
+          <Property Name="Код_должности" Type="Int32" Nullable="false" />
+          <Property Name="Название" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Пользователи_Должность" FromRole="Должность" ToRole="Пользователи" />
+        </EntityType>
+        <EntityType Name="Другое">
+          <Key>
+            <PropertyRef Name="Код_другого" />
+          </Key>
+          <Property Name="Код_другого" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_пользователя" Type="Int32" />
+          <Property Name="Серия_паспорта" Type="Int32" />
+          <Property Name="Номер_паспорта" Type="Int32" />
+          <Property Name="Телефон" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="E_mail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Номер_страхового_полиса" Type="Int32" />
+          <Property Name="Код_типа_страхового_полиса" Type="Int32" />
+          <Property Name="Код_страховой_компании" Type="Int32" />
+          <Property Name="Дата_рождения" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Другое_Пользователи" FromRole="Другое" ToRole="Пользователи" />
+          <NavigationProperty Name="Страховая_компания" Relationship="MedLaboratoryModel.FK_Другое_Страховая_компания" FromRole="Другое" ToRole="Страховая_компания" />
+          <NavigationProperty Name="Тип_страхового_полиса" Relationship="MedLaboratoryModel.FK_Другое_Тип_страхового_полиса" FromRole="Другое" ToRole="Тип_страхового_полиса" />
+        </EntityType>
+        <EntityType Name="Заказ">
+          <Key>
+            <PropertyRef Name="Код_заказа" />
+          </Key>
+          <Property Name="Код_заказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_пациент" Type="Int32" />
+          <Property Name="Статус_заказа" Type="Int32" />
+          <Property Name="Время_выполнения_заказа" Type="Int32" />
+          <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Заказ_Пользователи" FromRole="Заказ" ToRole="Пользователи" />
+          <NavigationProperty Name="Статус" Relationship="MedLaboratoryModel.FK_Заказ_Статус" FromRole="Заказ" ToRole="Статус" />
+          <NavigationProperty Name="Счет_страховой" Relationship="MedLaboratoryModel.FK_Счет_страховой_Заказ" FromRole="Заказ" ToRole="Счет_страховой" />
+          <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Заказ" FromRole="Заказ" ToRole="Услуги_заказа" />
+          <Property Name="Время_заказа" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Используемый_материал">
+          <Key>
+            <PropertyRef Name="Код_используемого_материала" />
+          </Key>
+          <Property Name="Код_используемого_материала" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_услуги_заказа" Type="Int32" />
+          <Property Name="Код_материала" Type="Int32" />
+          <Property Name="Количество" Type="Int32" />
+          <NavigationProperty Name="Материал" Relationship="MedLaboratoryModel.FK_Используемый_материал_Материал" FromRole="Используемый_материал" ToRole="Материал" />
+          <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Используемый_материал_Услуги_заказа" FromRole="Используемый_материал" ToRole="Услуги_заказа" />
+        </EntityType>
+        <EntityType Name="История">
+          <Key>
+            <PropertyRef Name="Код_истории" />
+          </Key>
+          <Property Name="Код_истории" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_пользователя" Type="Int32" />
+          <Property Name="Дата_и_время_входа" Type="DateTime" Precision="3" />
+          <Property Name="IP_адрес" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_История_Пользователи" FromRole="История" ToRole="Пользователи" />
+        </EntityType>
+        <EntityType Name="Материал">
+          <Key>
+            <PropertyRef Name="Код_материала" />
+          </Key>
+          <Property Name="Код_материала" Type="Int32" Nullable="false" />
+          <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Используемый_материал" Relationship="MedLaboratoryModel.FK_Используемый_материал_Материал" FromRole="Материал" ToRole="Используемый_материал" />
+        </EntityType>
+        <EntityType Name="Пользователи">
+          <Key>
+            <PropertyRef Name="Код_пользователя" />
+          </Key>
+          <Property Name="Код_пользователя" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_должности" Type="Int32" />
+          <Property Name="Фамилия" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Имя" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Отчество" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Фотография" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Авторизация" Relationship="MedLaboratoryModel.FK_Авторизация_Пользователи" FromRole="Пользователи" ToRole="Авторизация" />
+          <NavigationProperty Name="Должность" Relationship="MedLaboratoryModel.FK_Пользователи_Должность" FromRole="Пользователи" ToRole="Должность" />
+          <NavigationProperty Name="Другое" Relationship="MedLaboratoryModel.FK_Другое_Пользователи" FromRole="Пользователи" ToRole="Другое" />
+          <NavigationProperty Name="Заказ" Relationship="MedLaboratoryModel.FK_Заказ_Пользователи" FromRole="Пользователи" ToRole="Заказ" />
+          <NavigationProperty Name="История" Relationship="MedLaboratoryModel.FK_История_Пользователи" FromRole="Пользователи" ToRole="История" />
+          <NavigationProperty Name="Счет_страховой" Relationship="MedLaboratoryModel.FK_Счет_страховой_Пользователи" FromRole="Пользователи" ToRole="Счет_страховой" />
+        </EntityType>
+        <EntityType Name="Работа_анализатора">
+          <Key>
+            <PropertyRef Name="Код_работы_анализватора" />
+          </Key>
+          <Property Name="Код_работы_анализватора" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_услуги_заказа" Type="Int32" />
+          <Property Name="Код_анализатора" Type="Int32" />
+          <Property Name="Дата_и_время_поступления_заказа" Type="DateTime" Precision="3" />
+          <Property Name="Дата_и_время_выполнения_услуги" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Анализатор" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Анализатор" FromRole="Работа_анализатора" ToRole="Анализатор" />
+          <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа1" FromRole="Работа_анализатора" ToRole="Услуги_заказа" />
+        </EntityType>
+        <EntityType Name="Сданный_биоматериал">
+          <Key>
+            <PropertyRef Name="Код_сданного_биоматериала" />
+          </Key>
+          <Property Name="Код_сданного_биоматериала" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_услуги_заказа" Type="Int32" />
+          <Property Name="Код_биоматериала" Type="Int32" />
+          <Property Name="Количество" Type="Double" />
+          <Property Name="Время_сдачи" Type="DateTime" Precision="3" />
+          <Property Name="Код_пробирки" Type="Int64" />
+          <NavigationProperty Name="Биоматериал" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Биоматериал" FromRole="Сданный_биоматериал" ToRole="Биоматериал" />
+          <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Услуги_заказа" FromRole="Сданный_биоматериал" ToRole="Услуги_заказа" />
+        </EntityType>
+        <EntityType Name="Статус">
+          <Key>
+            <PropertyRef Name="Код_статуса" />
+          </Key>
+          <Property Name="Код_статуса" Type="Int32" Nullable="false" />
+          <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Заказ" Relationship="MedLaboratoryModel.FK_Заказ_Статус" FromRole="Статус" ToRole="Заказ" />
+          <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услуги_заказа_Статус" FromRole="Статус" ToRole="Услуги_заказа" />
+        </EntityType>
+        <EntityType Name="Страховая_компания">
+          <Key>
+            <PropertyRef Name="Код_страховой_компании" />
+          </Key>
+          <Property Name="Код_страховой_компании" Type="Int32" Nullable="false" />
+          <Property Name="Название" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Адрес" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ИНН" Type="Int64" />
+          <Property Name="Расчётный_счёт" Type="Int64" />
+          <Property Name="БИК" Type="Int64" />
+          <NavigationProperty Name="Другое" Relationship="MedLaboratoryModel.FK_Другое_Страховая_компания" FromRole="Страховая_компания" ToRole="Другое" />
+        </EntityType>
+        <EntityType Name="Счет_страховой">
+          <Key>
+            <PropertyRef Name="Код_счета_страховой" />
+          </Key>
+          <Property Name="Код_счета_страховой" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_бухгалтера" Type="Int32" />
+          <Property Name="Код_заказа" Type="Int32" />
+          <Property Name="Сумма" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Заказ" Relationship="MedLaboratoryModel.FK_Счет_страховой_Заказ" FromRole="Счет_страховой" ToRole="Заказ" />
+          <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Счет_страховой_Пользователи" FromRole="Счет_страховой" ToRole="Пользователи" />
+        </EntityType>
+        <EntityType Name="Тип_страхового_полиса">
+          <Key>
+            <PropertyRef Name="Код_типа_страхового_полиса" />
+          </Key>
+          <Property Name="Код_типа_страхового_полиса" Type="Int32" Nullable="false" />
+          <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Другое" Relationship="MedLaboratoryModel.FK_Другое_Тип_страхового_полиса" FromRole="Тип_страхового_полиса" ToRole="Другое" />
+        </EntityType>
+        <EntityType Name="Услуга">
+          <Key>
+            <PropertyRef Name="Код_услуги" />
+          </Key>
+          <Property Name="Код_услуги" Type="Int32" Nullable="false" />
+          <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Стоимость" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Срок_выполнения" Type="Int32" />
+          <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Услуга" FromRole="Услуга" ToRole="Услуги_заказа" />
+        </EntityType>
+        <EntityType Name="Услуги_заказа">
+          <Key>
+            <PropertyRef Name="Код_услуги_заказа" />
+          </Key>
+          <Property Name="Код_услуги_заказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_заказа" Type="Int32" />
+          <Property Name="Код_услуг" Type="Int32" />
+          <Property Name="Код_статуса_услуги" Type="Int32" />
+          <Property Name="Дата_и_время_выполнения" Type="DateTime" Precision="3" />
+          <Property Name="Результат" Type="Double" />
+          <Property Name="Код_сотрудника" Type="Int32" />
+          <Property Name="Среднее_отклонение" Type="Double" />
+          <NavigationProperty Name="Заказ" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Заказ" FromRole="Услуги_заказа" ToRole="Заказ" />
+          <NavigationProperty Name="Используемый_материал" Relationship="MedLaboratoryModel.FK_Используемый_материал_Услуги_заказа" FromRole="Услуги_заказа" ToRole="Используемый_материал" />
+          <NavigationProperty Name="Работа_анализатора" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа1" FromRole="Услуги_заказа" ToRole="Работа_анализатора" />
+          <NavigationProperty Name="Сданный_биоматериал" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Услуги_заказа" FromRole="Услуги_заказа" ToRole="Сданный_биоматериал" />
+          <NavigationProperty Name="Статус" Relationship="MedLaboratoryModel.FK_Услуги_заказа_Статус" FromRole="Услуги_заказа" ToRole="Статус" />
+          <NavigationProperty Name="Услуга" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Услуга" FromRole="Услуги_заказа" ToRole="Услуга" />
+        </EntityType>
+        <Association Name="FK_Авторизация_Пользователи">
+          <End Type="MedLaboratoryModel.Пользователи" Role="Пользователи" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Авторизация" Role="Авторизация" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код_пользователя" />
+            </Principal>
+            <Dependent Role="Авторизация">
+              <PropertyRef Name="Код_пользователя" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Работа_анализатора_Анализатор">
+          <End Type="MedLaboratoryModel.Анализатор" Role="Анализатор" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Работа_анализатора" Role="Работа_анализатора" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Анализатор">
+              <PropertyRef Name="Код_анализатора" />
+            </Principal>
+            <Dependent Role="Работа_анализатора">
+              <PropertyRef Name="Код_анализатора" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Сданный_биоматериал_Биоматериал">
+          <End Type="MedLaboratoryModel.Биоматериал" Role="Биоматериал" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Сданный_биоматериал" Role="Сданный_биоматериал" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Биоматериал">
+              <PropertyRef Name="Код_биоматериала" />
+            </Principal>
+            <Dependent Role="Сданный_биоматериал">
+              <PropertyRef Name="Код_биоматериала" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Пользователи_Должность">
+          <End Type="MedLaboratoryModel.Должность" Role="Должность" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Пользователи" Role="Пользователи" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Должность">
+              <PropertyRef Name="Код_должности" />
+            </Principal>
+            <Dependent Role="Пользователи">
+              <PropertyRef Name="Код_должности" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Другое_Пользователи">
+          <End Type="MedLaboratoryModel.Пользователи" Role="Пользователи" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Другое" Role="Другое" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код_пользователя" />
+            </Principal>
+            <Dependent Role="Другое">
+              <PropertyRef Name="Код_пользователя" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Другое_Страховая_компания">
+          <End Type="MedLaboratoryModel.Страховая_компания" Role="Страховая_компания" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Другое" Role="Другое" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Страховая_компания">
+              <PropertyRef Name="Код_страховой_компании" />
+            </Principal>
+            <Dependent Role="Другое">
+              <PropertyRef Name="Код_страховой_компании" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Другое_Тип_страхового_полиса">
+          <End Type="MedLaboratoryModel.Тип_страхового_полиса" Role="Тип_страхового_полиса" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Другое" Role="Другое" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Тип_страхового_полиса">
+              <PropertyRef Name="Код_типа_страхового_полиса" />
+            </Principal>
+            <Dependent Role="Другое">
+              <PropertyRef Name="Код_типа_страхового_полиса" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Заказ_Пользователи">
+          <End Type="MedLaboratoryModel.Пользователи" Role="Пользователи" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Заказ" Role="Заказ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код_пользователя" />
+            </Principal>
+            <Dependent Role="Заказ">
+              <PropertyRef Name="Код_пациент" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Заказ_Статус">
+          <End Type="MedLaboratoryModel.Статус" Role="Статус" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Заказ" Role="Заказ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Статус">
+              <PropertyRef Name="Код_статуса" />
+            </Principal>
+            <Dependent Role="Заказ">
+              <PropertyRef Name="Статус_заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Счет_страховой_Заказ">
+          <End Type="MedLaboratoryModel.Заказ" Role="Заказ" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Счет_страховой" Role="Счет_страховой" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Заказ">
+              <PropertyRef Name="Код_заказа" />
+            </Principal>
+            <Dependent Role="Счет_страховой">
+              <PropertyRef Name="Код_заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Услиги_заказа_Заказ">
+          <End Type="MedLaboratoryModel.Заказ" Role="Заказ" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Заказ">
+              <PropertyRef Name="Код_заказа" />
+            </Principal>
+            <Dependent Role="Услуги_заказа">
+              <PropertyRef Name="Код_заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Используемый_материал_Материал">
+          <End Type="MedLaboratoryModel.Материал" Role="Материал" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Используемый_материал" Role="Используемый_материал" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Материал">
+              <PropertyRef Name="Код_материала" />
+            </Principal>
+            <Dependent Role="Используемый_материал">
+              <PropertyRef Name="Код_материала" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Используемый_материал_Услуги_заказа">
+          <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Используемый_материал" Role="Используемый_материал" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуги_заказа">
+              <PropertyRef Name="Код_услуги_заказа" />
+            </Principal>
+            <Dependent Role="Используемый_материал">
+              <PropertyRef Name="Код_услуги_заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_История_Пользователи">
+          <End Type="MedLaboratoryModel.Пользователи" Role="Пользователи" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.История" Role="История" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код_пользователя" />
+            </Principal>
+            <Dependent Role="История">
+              <PropertyRef Name="Код_пользователя" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Счет_страховой_Пользователи">
+          <End Type="MedLaboratoryModel.Пользователи" Role="Пользователи" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Счет_страховой" Role="Счет_страховой" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Пользователи">
+              <PropertyRef Name="Код_пользователя" />
+            </Principal>
+            <Dependent Role="Счет_страховой">
+              <PropertyRef Name="Код_бухгалтера" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Работа_анализатора_Услуги_заказа1">
+          <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Работа_анализатора" Role="Работа_анализатора" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуги_заказа">
+              <PropertyRef Name="Код_услуги_заказа" />
+            </Principal>
+            <Dependent Role="Работа_анализатора">
+              <PropertyRef Name="Код_услуги_заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Сданный_биоматериал_Услуги_заказа">
+          <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Сданный_биоматериал" Role="Сданный_биоматериал" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуги_заказа">
+              <PropertyRef Name="Код_услуги_заказа" />
+            </Principal>
+            <Dependent Role="Сданный_биоматериал">
+              <PropertyRef Name="Код_услуги_заказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Услуги_заказа_Статус">
+          <End Type="MedLaboratoryModel.Статус" Role="Статус" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Статус">
+              <PropertyRef Name="Код_статуса" />
+            </Principal>
+            <Dependent Role="Услуги_заказа">
+              <PropertyRef Name="Код_статуса_услуги" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Услиги_заказа_Услуга">
+          <End Type="MedLaboratoryModel.Услуга" Role="Услуга" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Услуги_заказа" Role="Услуги_заказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуга">
+              <PropertyRef Name="Код_услуги" />
+            </Principal>
+            <Dependent Role="Услуги_заказа">
+              <PropertyRef Name="Код_услуг" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище MedLaboratoryModelContainer" CdmEntityContainer="MedLaboratoryEntities">
+          <EntitySetMapping Name="Авторизация">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Авторизация">
+              <MappingFragment StoreEntitySet="Авторизация">
+                <ScalarProperty Name="Время_блокировки" ColumnName="Время блокировки" />
+                <ScalarProperty Name="Дата_и_время_последнего_входа" ColumnName="Дата и время последнего входа" />
+                <ScalarProperty Name="IP_Адрес" ColumnName="IP-Адрес" />
+                <ScalarProperty Name="Пароль" ColumnName="Пароль" />
+                <ScalarProperty Name="Логин" ColumnName="Логин" />
+                <ScalarProperty Name="Код_пользователя" ColumnName="Код пользователя" />
+                <ScalarProperty Name="Код_авторизации" ColumnName="Код авторизации" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Анализатор">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Анализатор">
+              <MappingFragment StoreEntitySet="Анализатор">
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+                <ScalarProperty Name="Код_анализатора" ColumnName="Код анализатора" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Биоматериал">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Биоматериал">
+              <MappingFragment StoreEntitySet="Биоматериал">
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+                <ScalarProperty Name="Код_биоматериала" ColumnName="Код биоматериала" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Должность">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Должность">
+              <MappingFragment StoreEntitySet="Должность">
+                <ScalarProperty Name="Название" ColumnName="Название" />
+                <ScalarProperty Name="Код_должности" ColumnName="Код должности" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Другое">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Другое">
+              <MappingFragment StoreEntitySet="Другое">
+                <ScalarProperty Name="Дата_рождения" ColumnName="Дата рождения" />
+                <ScalarProperty Name="Код_страховой_компании" ColumnName="Код страховой компании" />
+                <ScalarProperty Name="Код_типа_страхового_полиса" ColumnName="Код типа страхового полиса" />
+                <ScalarProperty Name="Номер_страхового_полиса" ColumnName="Номер страхового полиса" />
+                <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+                <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+                <ScalarProperty Name="Номер_паспорта" ColumnName="Номер паспорта" />
+                <ScalarProperty Name="Серия_паспорта" ColumnName="Серия паспорта" />
+                <ScalarProperty Name="Код_пользователя" ColumnName="Код пользователя" />
+                <ScalarProperty Name="Код_другого" ColumnName="Код другого" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Заказ">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Заказ">
+              <MappingFragment StoreEntitySet="Заказ">
+                <ScalarProperty Name="Время_заказа" ColumnName="Время заказа" />
+                <ScalarProperty Name="Время_выполнения_заказа" ColumnName="Время выполнения заказа" />
+                <ScalarProperty Name="Статус_заказа" ColumnName="Статус заказа" />
+                <ScalarProperty Name="Код_пациент" ColumnName="Код пациент" />
+                <ScalarProperty Name="Код_заказа" ColumnName="Код заказа" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Используемый_материал">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Используемый_материал">
+              <MappingFragment StoreEntitySet="Используемый материал">
+                <ScalarProperty Name="Количество" ColumnName="Количество" />
+                <ScalarProperty Name="Код_материала" ColumnName="Код материала" />
+                <ScalarProperty Name="Код_услуги_заказа" ColumnName="Код услуги заказа" />
+                <ScalarProperty Name="Код_используемого_материала" ColumnName="Код используемого материала" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="История">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.История">
+              <MappingFragment StoreEntitySet="История">
+                <ScalarProperty Name="IP_адрес" ColumnName="IP-адрес" />
+                <ScalarProperty Name="Дата_и_время_входа" ColumnName="Дата и время входа" />
+                <ScalarProperty Name="Код_пользователя" ColumnName="Код пользователя" />
+                <ScalarProperty Name="Код_истории" ColumnName="Код истории" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Материал">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Материал">
+              <MappingFragment StoreEntitySet="Материал">
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+                <ScalarProperty Name="Код_материала" ColumnName="Код материала" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Пользователи">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Пользователи">
+              <MappingFragment StoreEntitySet="Пользователи">
+                <ScalarProperty Name="Фотография" ColumnName="Фотография" />
+                <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+                <ScalarProperty Name="Имя" ColumnName="Имя" />
+                <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+                <ScalarProperty Name="Код_должности" ColumnName="Код должности" />
+                <ScalarProperty Name="Код_пользователя" ColumnName="Код пользователя" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Работа_анализатора">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Работа_анализатора">
+              <MappingFragment StoreEntitySet="Работа анализатора">
+                <ScalarProperty Name="Дата_и_время_выполнения_услуги" ColumnName="Дата и время выполнения услуги" />
+                <ScalarProperty Name="Дата_и_время_поступления_заказа" ColumnName="Дата и время поступления заказа" />
+                <ScalarProperty Name="Код_анализатора" ColumnName="Код анализатора" />
+                <ScalarProperty Name="Код_услуги_заказа" ColumnName="Код услуги заказа" />
+                <ScalarProperty Name="Код_работы_анализватора" ColumnName="Код работы анализватора" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Сданный_биоматериал">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Сданный_биоматериал">
+              <MappingFragment StoreEntitySet="Сданный биоматериал">
+                <ScalarProperty Name="Код_пробирки" ColumnName="Код пробирки" />
+                <ScalarProperty Name="Время_сдачи" ColumnName="Время сдачи" />
+                <ScalarProperty Name="Количество" ColumnName="Количество" />
+                <ScalarProperty Name="Код_биоматериала" ColumnName="Код биоматериала" />
+                <ScalarProperty Name="Код_услуги_заказа" ColumnName="Код услуги заказа" />
+                <ScalarProperty Name="Код_сданного_биоматериала" ColumnName="Код сданного биоматериала" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Статус">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Статус">
+              <MappingFragment StoreEntitySet="Статус">
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+                <ScalarProperty Name="Код_статуса" ColumnName="Код статуса" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Страховая_компания">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Страховая_компания">
+              <MappingFragment StoreEntitySet="Страховая компания">
+                <ScalarProperty Name="БИК" ColumnName="БИК" />
+                <ScalarProperty Name="Расчётный_счёт" ColumnName="Расчётный счёт" />
+                <ScalarProperty Name="ИНН" ColumnName="ИНН" />
+                <ScalarProperty Name="Адрес" ColumnName="Адрес" />
+                <ScalarProperty Name="Название" ColumnName="Название" />
+                <ScalarProperty Name="Код_страховой_компании" ColumnName="Код страховой компании" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Счет_страховой">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Счет_страховой">
+              <MappingFragment StoreEntitySet="Счет страховой">
+                <ScalarProperty Name="Сумма" ColumnName="Сумма" />
+                <ScalarProperty Name="Код_заказа" ColumnName="Код заказа" />
+                <ScalarProperty Name="Код_бухгалтера" ColumnName="Код бухгалтера" />
+                <ScalarProperty Name="Код_счета_страховой" ColumnName="Код счета страховой" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Тип_страхового_полиса">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Тип_страхового_полиса">
+              <MappingFragment StoreEntitySet="Тип страхового полиса">
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+                <ScalarProperty Name="Код_типа_страхового_полиса" ColumnName="Код типа страхового полиса" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Услуга">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Услуга">
+              <MappingFragment StoreEntitySet="Услуга">
+                <ScalarProperty Name="Срок_выполнения" ColumnName="Срок выполнения" />
+                <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+                <ScalarProperty Name="Код_услуги" ColumnName="Код услуги" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Услуги_заказа">
+            <EntityTypeMapping TypeName="MedLaboratoryModel.Услуги_заказа">
+              <MappingFragment StoreEntitySet="Услуги заказа">
+                <ScalarProperty Name="Среднее_отклонение" ColumnName="Среднее отклонение" />
+                <ScalarProperty Name="Код_сотрудника" ColumnName="Код сотрудника" />
+                <ScalarProperty Name="Результат" ColumnName="Результат" />
+                <ScalarProperty Name="Дата_и_время_выполнения" ColumnName="Дата и время выполнения" />
+                <ScalarProperty Name="Код_статуса_услуги" ColumnName="Код статуса услуги" />
+                <ScalarProperty Name="Код_услуг" ColumnName="Код услуг" />
+                <ScalarProperty Name="Код_заказа" ColumnName="Код заказа" />
+                <ScalarProperty Name="Код_услуги_заказа" ColumnName="Код услуги заказа" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

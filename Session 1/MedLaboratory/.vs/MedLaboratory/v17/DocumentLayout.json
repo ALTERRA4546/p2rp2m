@@ -1,0 +1,174 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\addbiomaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\addbiomaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\addbiomaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\addbiomaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\multireport.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\multireport.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\receptionbiomaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\receptionbiomaterial.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\receptionbiomaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\receptionbiomaterial.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\multireport.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\multireport.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\laboratoryassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\laboratoryassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\laboratoryassistant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\laboratoryassistant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddBioMaterial.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\AddBioMaterial.xaml.cs",
+              "RelativeDocumentMoniker": "MedLaboratory\\AddBioMaterial.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\AddBioMaterial.xaml.cs",
+              "RelativeToolTip": "MedLaboratory\\AddBioMaterial.xaml.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAcwFMAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:56:01.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddBioMaterial.xaml",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\AddBioMaterial.xaml",
+              "RelativeDocumentMoniker": "MedLaboratory\\AddBioMaterial.xaml",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\AddBioMaterial.xaml",
+              "RelativeToolTip": "MedLaboratory\\AddBioMaterial.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-08T18:55:56.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReceptionBioMaterial.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\ReceptionBioMaterial.xaml.cs",
+              "RelativeDocumentMoniker": "MedLaboratory\\ReceptionBioMaterial.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\ReceptionBioMaterial.xaml.cs",
+              "RelativeToolTip": "MedLaboratory\\ReceptionBioMaterial.xaml.cs",
+              "ViewState": "AQIAAA0BAAAAAAAAAAAAAB0BAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:53:23.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReceptionBioMaterial.xaml",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\ReceptionBioMaterial.xaml",
+              "RelativeDocumentMoniker": "MedLaboratory\\ReceptionBioMaterial.xaml",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\ReceptionBioMaterial.xaml",
+              "RelativeToolTip": "MedLaboratory\\ReceptionBioMaterial.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-08T18:53:14.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LaboratoryAssistant.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml.cs",
+              "RelativeDocumentMoniker": "MedLaboratory\\LaboratoryAssistant.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml.cs",
+              "RelativeToolTip": "MedLaboratory\\LaboratoryAssistant.xaml.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwJsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:50:04.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LaboratoryAssistant.xaml",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml",
+              "RelativeDocumentMoniker": "MedLaboratory\\LaboratoryAssistant.xaml",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml",
+              "RelativeToolTip": "MedLaboratory\\LaboratoryAssistant.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-08T18:49:55.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MultiReport.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\MultiReport.xaml.cs",
+              "RelativeDocumentMoniker": "MedLaboratory\\MultiReport.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\MultiReport.xaml.cs",
+              "RelativeToolTip": "MedLaboratory\\MultiReport.xaml.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAwwJsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:22:59.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MultiReport.xaml",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\MultiReport.xaml",
+              "RelativeDocumentMoniker": "MedLaboratory\\MultiReport.xaml",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\MultiReport.xaml",
+              "RelativeToolTip": "MedLaboratory\\MultiReport.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-08T18:20:57.975Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
