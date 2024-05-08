@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedLaboratory"
         mc:Ignorable="d"
-        Title="Приме биоматериала" Height="270" Width="600" Loaded="Window_Loaded">
+        Title="Приме биоматериала" Height="450" Width="600" Loaded="Window_Loaded">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-            <Rectangle HorizontalAlignment="Center" Height="200" Width="550" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
+            <Rectangle HorizontalAlignment="Center" Height="400" Width="550" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Rectangle HorizontalAlignment="Center" Height="50" Width="550" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
                 <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">
@@ -19,11 +19,16 @@
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,60,10,10">
                 <StackPanel>
                     <WrapPanel Margin="0,0,0,10">
+                        <Label Content="Код пробирки" FontFamily="Comic Sans MS" Margin="0,0,28,0" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBox x:Name="kodetest" FontFamily="Comic Sans MS" FontSize="20" Width="350"/>
+                    </WrapPanel>
+                    <Image x:Name="barcode" Width="510" Height="150"/>
+                    <WrapPanel Margin="0,0,0,10">
                         <Label Content="Биоматериал" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <ComboBox x:Name="biomat" Margin="34,0,0,0" Width="350" FontFamily="Comic Sans MS" FontSize="20"/>
                     </WrapPanel>
                     <WrapPanel Margin="0,0,0,10">
-                        <Label Content="Количество (мл)" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label Content="Количество (мл)" FontFamily="Comic Sans MS" Margin="0,0,1,0" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <TextBox x:Name="kolvo" FontFamily="Comic Sans MS" FontSize="20" Width="350"/>
                     </WrapPanel>
                     <Button x:Name="enterBio" Content="Внести биоматериал" HorizontalAlignment="Center" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" VerticalAlignment="Top" Width="520" Click="enterBio_Click"/>

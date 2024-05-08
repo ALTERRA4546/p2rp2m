@@ -48,6 +48,7 @@ namespace MedLaboratory
             public static int idOrder { get; set; }
             public static int idIspolMater { get; set; }
             public static int idReport { get; set; }
+            public static int idService { get; set; }
             public static bool checkCapcha { get;set; }
         }
 

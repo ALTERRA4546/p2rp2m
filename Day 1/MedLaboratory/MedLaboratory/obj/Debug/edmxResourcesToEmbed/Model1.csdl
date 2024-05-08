@@ -137,15 +137,16 @@
     <Key>
       <PropertyRef Name="Код_другого" />
     </Key>
-    <Property Name="Код_другого" Type="Int32" Nullable="false" />
+    <Property Name="Код_другого" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Код_пользователя" Type="Int32" />
     <Property Name="Серия_паспорта" Type="Int32" />
     <Property Name="Номер_паспорта" Type="Int32" />
-    <Property Name="Таелефон" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="Телефон" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
     <Property Name="E_mail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Номер_страхового_полиса" Type="Int32" />
     <Property Name="Код_типа_страхового_полиса" Type="Int32" />
     <Property Name="Код_страховой_компании" Type="Int32" />
+    <Property Name="Дата_рождения" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Другое_Пользователи" FromRole="Другое" ToRole="Пользователи" />
     <NavigationProperty Name="Страховая_компания" Relationship="MedLaboratoryModel.FK_Другое_Страховая_компания" FromRole="Другое" ToRole="Страховая_компания" />
     <NavigationProperty Name="Тип_страхового_полиса" Relationship="MedLaboratoryModel.FK_Другое_Тип_страхового_полиса" FromRole="Другое" ToRole="Тип_страхового_полиса" />
@@ -154,7 +155,7 @@
     <Key>
       <PropertyRef Name="Код_заказа" />
     </Key>
-    <Property Name="Код_заказа" Type="Int32" Nullable="false" />
+    <Property Name="Код_заказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Код_пациент" Type="Int32" />
     <Property Name="Статус_заказа" Type="Int32" />
     <Property Name="Время_выполнения_заказа" Type="Int32" />
@@ -167,7 +168,7 @@
     <Key>
       <PropertyRef Name="Код_используемого_материала" />
     </Key>
-    <Property Name="Код_используемого_материала" Type="Int32" Nullable="false" />
+    <Property Name="Код_используемого_материала" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Код_услуги_заказа" Type="Int32" />
     <Property Name="Код_материала" Type="Int32" />
     <Property Name="Количество" Type="Int32" />
@@ -196,7 +197,7 @@
     <Key>
       <PropertyRef Name="Код_пользователя" />
     </Key>
-    <Property Name="Код_пользователя" Type="Int32" Nullable="false" />
+    <Property Name="Код_пользователя" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Код_должности" Type="Int32" />
     <Property Name="Фамилия" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Имя" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
@@ -230,6 +231,7 @@
     <Property Name="Код_биоматериала" Type="Int32" />
     <Property Name="Количество" Type="Double" />
     <Property Name="Время_сдачи" Type="DateTime" Precision="3" />
+    <Property Name="Код_пробирки" Type="Int64" />
     <NavigationProperty Name="Биоматериал" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Биоматериал" FromRole="Сданный_биоматериал" ToRole="Биоматериал" />
     <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Услуги_заказа" FromRole="Сданный_биоматериал" ToRole="Услуги_заказа" />
   </EntityType>
@@ -258,7 +260,7 @@
     <Key>
       <PropertyRef Name="Код_счета_страховой" />
     </Key>
-    <Property Name="Код_счета_страховой" Type="Int32" Nullable="false" />
+    <Property Name="Код_счета_страховой" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Код_бухгалтера" Type="Int32" />
     <Property Name="Код_заказа" Type="Int32" />
     <Property Name="Сумма" Type="Decimal" Precision="19" Scale="4" />
@@ -287,7 +289,7 @@
     <Key>
       <PropertyRef Name="Код_услуги_заказа" />
     </Key>
-    <Property Name="Код_услуги_заказа" Type="Int32" Nullable="false" />
+    <Property Name="Код_услуги_заказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Код_заказа" Type="Int32" />
     <Property Name="Код_услуг" Type="Int32" />
     <Property Name="Код_статуса_услуги" Type="Int32" />

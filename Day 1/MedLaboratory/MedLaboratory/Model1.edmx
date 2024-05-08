@@ -42,21 +42,22 @@
           <Key>
             <PropertyRef Name="Код другого" />
           </Key>
-          <Property Name="Код другого" Type="int" Nullable="false" />
+          <Property Name="Код другого" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Код пользователя" Type="int" />
           <Property Name="Серия паспорта" Type="int" />
           <Property Name="Номер паспорта" Type="int" />
-          <Property Name="Таелефон" Type="nvarchar" MaxLength="18" />
+          <Property Name="Телефон" Type="nvarchar" MaxLength="18" />
           <Property Name="E-mail" Type="nvarchar" MaxLength="250" />
           <Property Name="Номер страхового полиса" Type="int" />
           <Property Name="Код типа страхового полиса" Type="int" />
           <Property Name="Код страховой компании" Type="int" />
+          <Property Name="Дата рождения" Type="date" />
         </EntityType>
         <EntityType Name="Заказ">
           <Key>
             <PropertyRef Name="Код заказа" />
           </Key>
-          <Property Name="Код заказа" Type="int" Nullable="false" />
+          <Property Name="Код заказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Код пациент" Type="int" />
           <Property Name="Статус заказа" Type="int" />
           <Property Name="Время выполнения заказа" Type="int" />
@@ -90,7 +91,7 @@
           <Key>
             <PropertyRef Name="Код пользователя" />
           </Key>
-          <Property Name="Код пользователя" Type="int" Nullable="false" />
+          <Property Name="Код пользователя" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Код должности" Type="int" />
           <Property Name="Фамилия" Type="nvarchar" MaxLength="250" />
           <Property Name="Имя" Type="nvarchar" MaxLength="250" />
@@ -116,6 +117,7 @@
           <Property Name="Код биоматериала" Type="int" />
           <Property Name="Количество" Type="float" />
           <Property Name="Время сдачи" Type="datetime" />
+          <Property Name="Код пробирки" Type="bigint" />
         </EntityType>
         <EntityType Name="Статус">
           <Key>
@@ -164,7 +166,7 @@
           <Key>
             <PropertyRef Name="Код услуги заказа" />
           </Key>
-          <Property Name="Код услуги заказа" Type="int" Nullable="false" />
+          <Property Name="Код услуги заказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Код заказа" Type="int" />
           <Property Name="Код услуг" Type="int" />
           <Property Name="Код статуса услуги" Type="int" />
@@ -638,15 +640,16 @@
           <Key>
             <PropertyRef Name="Код_другого" />
           </Key>
-          <Property Name="Код_другого" Type="Int32" Nullable="false" />
+          <Property Name="Код_другого" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Код_пользователя" Type="Int32" />
           <Property Name="Серия_паспорта" Type="Int32" />
           <Property Name="Номер_паспорта" Type="Int32" />
-          <Property Name="Таелефон" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="Телефон" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
           <Property Name="E_mail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Номер_страхового_полиса" Type="Int32" />
           <Property Name="Код_типа_страхового_полиса" Type="Int32" />
           <Property Name="Код_страховой_компании" Type="Int32" />
+          <Property Name="Дата_рождения" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Другое_Пользователи" FromRole="Другое" ToRole="Пользователи" />
           <NavigationProperty Name="Страховая_компания" Relationship="MedLaboratoryModel.FK_Другое_Страховая_компания" FromRole="Другое" ToRole="Страховая_компания" />
           <NavigationProperty Name="Тип_страхового_полиса" Relationship="MedLaboratoryModel.FK_Другое_Тип_страхового_полиса" FromRole="Другое" ToRole="Тип_страхового_полиса" />
@@ -655,7 +658,7 @@
           <Key>
             <PropertyRef Name="Код_заказа" />
           </Key>
-          <Property Name="Код_заказа" Type="Int32" Nullable="false" />
+          <Property Name="Код_заказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Код_пациент" Type="Int32" />
           <Property Name="Статус_заказа" Type="Int32" />
           <Property Name="Время_выполнения_заказа" Type="Int32" />
@@ -668,7 +671,7 @@
           <Key>
             <PropertyRef Name="Код_используемого_материала" />
           </Key>
-          <Property Name="Код_используемого_материала" Type="Int32" Nullable="false" />
+          <Property Name="Код_используемого_материала" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Код_услуги_заказа" Type="Int32" />
           <Property Name="Код_материала" Type="Int32" />
           <Property Name="Количество" Type="Int32" />
@@ -697,7 +700,7 @@
           <Key>
             <PropertyRef Name="Код_пользователя" />
           </Key>
-          <Property Name="Код_пользователя" Type="Int32" Nullable="false" />
+          <Property Name="Код_пользователя" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Код_должности" Type="Int32" />
           <Property Name="Фамилия" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Имя" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
@@ -731,6 +734,7 @@
           <Property Name="Код_биоматериала" Type="Int32" />
           <Property Name="Количество" Type="Double" />
           <Property Name="Время_сдачи" Type="DateTime" Precision="3" />
+          <Property Name="Код_пробирки" Type="Int64" />
           <NavigationProperty Name="Биоматериал" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Биоматериал" FromRole="Сданный_биоматериал" ToRole="Биоматериал" />
           <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Сданный_биоматериал_Услуги_заказа" FromRole="Сданный_биоматериал" ToRole="Услуги_заказа" />
         </EntityType>
@@ -759,7 +763,7 @@
           <Key>
             <PropertyRef Name="Код_счета_страховой" />
           </Key>
-          <Property Name="Код_счета_страховой" Type="Int32" Nullable="false" />
+          <Property Name="Код_счета_страховой" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Код_бухгалтера" Type="Int32" />
           <Property Name="Код_заказа" Type="Int32" />
           <Property Name="Сумма" Type="Decimal" Precision="19" Scale="4" />
@@ -788,7 +792,7 @@
           <Key>
             <PropertyRef Name="Код_услуги_заказа" />
           </Key>
-          <Property Name="Код_услуги_заказа" Type="Int32" Nullable="false" />
+          <Property Name="Код_услуги_заказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Код_заказа" Type="Int32" />
           <Property Name="Код_услуг" Type="Int32" />
           <Property Name="Код_статуса_услуги" Type="Int32" />
@@ -1077,11 +1081,12 @@
           <EntitySetMapping Name="Другое">
             <EntityTypeMapping TypeName="MedLaboratoryModel.Другое">
               <MappingFragment StoreEntitySet="Другое">
+                <ScalarProperty Name="Дата_рождения" ColumnName="Дата рождения" />
                 <ScalarProperty Name="Код_страховой_компании" ColumnName="Код страховой компании" />
                 <ScalarProperty Name="Код_типа_страхового_полиса" ColumnName="Код типа страхового полиса" />
                 <ScalarProperty Name="Номер_страхового_полиса" ColumnName="Номер страхового полиса" />
                 <ScalarProperty Name="E_mail" ColumnName="E-mail" />
-                <ScalarProperty Name="Таелефон" ColumnName="Таелефон" />
+                <ScalarProperty Name="Телефон" ColumnName="Телефон" />
                 <ScalarProperty Name="Номер_паспорта" ColumnName="Номер паспорта" />
                 <ScalarProperty Name="Серия_паспорта" ColumnName="Серия паспорта" />
                 <ScalarProperty Name="Код_пользователя" ColumnName="Код пользователя" />
@@ -1153,6 +1158,7 @@
           <EntitySetMapping Name="Сданный_биоматериал">
             <EntityTypeMapping TypeName="MedLaboratoryModel.Сданный_биоматериал">
               <MappingFragment StoreEntitySet="Сданный биоматериал">
+                <ScalarProperty Name="Код_пробирки" ColumnName="Код пробирки" />
                 <ScalarProperty Name="Время_сдачи" ColumnName="Время сдачи" />
                 <ScalarProperty Name="Количество" ColumnName="Количество" />
                 <ScalarProperty Name="Код_биоматериала" ColumnName="Код биоматериала" />

@@ -37,21 +37,22 @@
     <Key>
       <PropertyRef Name="Код другого" />
     </Key>
-    <Property Name="Код другого" Type="int" Nullable="false" />
+    <Property Name="Код другого" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Код пользователя" Type="int" />
     <Property Name="Серия паспорта" Type="int" />
     <Property Name="Номер паспорта" Type="int" />
-    <Property Name="Таелефон" Type="nvarchar" MaxLength="18" />
+    <Property Name="Телефон" Type="nvarchar" MaxLength="18" />
     <Property Name="E-mail" Type="nvarchar" MaxLength="250" />
     <Property Name="Номер страхового полиса" Type="int" />
     <Property Name="Код типа страхового полиса" Type="int" />
     <Property Name="Код страховой компании" Type="int" />
+    <Property Name="Дата рождения" Type="date" />
   </EntityType>
   <EntityType Name="Заказ">
     <Key>
       <PropertyRef Name="Код заказа" />
     </Key>
-    <Property Name="Код заказа" Type="int" Nullable="false" />
+    <Property Name="Код заказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Код пациент" Type="int" />
     <Property Name="Статус заказа" Type="int" />
     <Property Name="Время выполнения заказа" Type="int" />
@@ -85,7 +86,7 @@
     <Key>
       <PropertyRef Name="Код пользователя" />
     </Key>
-    <Property Name="Код пользователя" Type="int" Nullable="false" />
+    <Property Name="Код пользователя" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Код должности" Type="int" />
     <Property Name="Фамилия" Type="nvarchar" MaxLength="250" />
     <Property Name="Имя" Type="nvarchar" MaxLength="250" />
@@ -111,6 +112,7 @@
     <Property Name="Код биоматериала" Type="int" />
     <Property Name="Количество" Type="float" />
     <Property Name="Время сдачи" Type="datetime" />
+    <Property Name="Код пробирки" Type="bigint" />
   </EntityType>
   <EntityType Name="Статус">
     <Key>
@@ -159,7 +161,7 @@
     <Key>
       <PropertyRef Name="Код услуги заказа" />
     </Key>
-    <Property Name="Код услуги заказа" Type="int" Nullable="false" />
+    <Property Name="Код услуги заказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Код заказа" Type="int" />
     <Property Name="Код услуг" Type="int" />
     <Property Name="Код статуса услуги" Type="int" />

@@ -19,6 +19,7 @@ namespace MedLaboratory
         public Nullable<int> Код_биоматериала { get; set; }
         public Nullable<double> Количество { get; set; }
         public Nullable<System.DateTime> Время_сдачи { get; set; }
+        public Nullable<long> Код_пробирки { get; set; }
     
         public virtual Биоматериал Биоматериал { get; set; }
         public virtual Услуги_заказа Услуги_заказа { get; set; }

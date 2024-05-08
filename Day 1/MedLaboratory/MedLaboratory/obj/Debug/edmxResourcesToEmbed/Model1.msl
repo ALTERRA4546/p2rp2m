@@ -41,11 +41,12 @@
     <EntitySetMapping Name="Другое">
       <EntityTypeMapping TypeName="MedLaboratoryModel.Другое">
         <MappingFragment StoreEntitySet="Другое">
+          <ScalarProperty Name="Дата_рождения" ColumnName="Дата рождения" />
           <ScalarProperty Name="Код_страховой_компании" ColumnName="Код страховой компании" />
           <ScalarProperty Name="Код_типа_страхового_полиса" ColumnName="Код типа страхового полиса" />
           <ScalarProperty Name="Номер_страхового_полиса" ColumnName="Номер страхового полиса" />
           <ScalarProperty Name="E_mail" ColumnName="E-mail" />
-          <ScalarProperty Name="Таелефон" ColumnName="Таелефон" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
           <ScalarProperty Name="Номер_паспорта" ColumnName="Номер паспорта" />
           <ScalarProperty Name="Серия_паспорта" ColumnName="Серия паспорта" />
           <ScalarProperty Name="Код_пользователя" ColumnName="Код пользователя" />
@@ -117,6 +118,7 @@
     <EntitySetMapping Name="Сданный_биоматериал">
       <EntityTypeMapping TypeName="MedLaboratoryModel.Сданный_биоматериал">
         <MappingFragment StoreEntitySet="Сданный биоматериал">
+          <ScalarProperty Name="Код_пробирки" ColumnName="Код пробирки" />
           <ScalarProperty Name="Время_сдачи" ColumnName="Время сдачи" />
           <ScalarProperty Name="Количество" ColumnName="Количество" />
           <ScalarProperty Name="Код_биоматериала" ColumnName="Код биоматериала" />

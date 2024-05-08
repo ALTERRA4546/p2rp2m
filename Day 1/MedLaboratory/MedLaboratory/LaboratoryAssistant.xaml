@@ -26,7 +26,8 @@
                 <StackPanel>
                     <DataGrid x:Name="dgrid" Margin="0,0,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" Width="1240" Height="550"/>
                     <WrapPanel HorizontalAlignment="Center">
-                        <Button Content="Принять биоматериал" HorizontalAlignment="Left" Margin="0,0,10,0" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click"/>
+                        <Button Content="Добавить заказ" HorizontalAlignment="Left" Margin="0,0,10,0" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click_2"/>
+                        <Button Content="Редактировать заказ" HorizontalAlignment="Left" Margin="0,0,10,0" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click"/>
                         <Button Content="Сформировать отчет" HorizontalAlignment="Left" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click_1"/>
                     </WrapPanel>
                 </StackPanel>

@@ -18,11 +18,12 @@ namespace MedLaboratory
         public Nullable<int> Код_пользователя { get; set; }
         public Nullable<int> Серия_паспорта { get; set; }
         public Nullable<int> Номер_паспорта { get; set; }
-        public string Таелефон { get; set; }
+        public string Телефон { get; set; }
         public string E_mail { get; set; }
         public Nullable<int> Номер_страхового_полиса { get; set; }
         public Nullable<int> Код_типа_страхового_полиса { get; set; }
         public Nullable<int> Код_страховой_компании { get; set; }
+        public Nullable<System.DateTime> Дата_рождения { get; set; }
     
         public virtual Пользователи Пользователи { get; set; }
         public virtual Страховая_компания Страховая_компания { get; set; }

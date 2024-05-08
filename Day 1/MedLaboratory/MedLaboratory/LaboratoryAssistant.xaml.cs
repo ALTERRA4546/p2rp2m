@@ -65,20 +65,20 @@ namespace MedLaboratory
                             join
                             stat in bd.Статус on us.Код_статуса_услуги equals stat.Код_статуса
                             join
-                            sotr in bd.Пользователи on us.Код_сотрудника equals sotr.Код_пользователя
+                            sotr in bd.Пользователи on z.Код_пациент equals sotr.Код_пользователя
                             select new
                             { 
                                 z.Код_заказа,
-                                us.Код_услуги_заказа,
+                                //us.Код_услуги_заказа,
                                 z.Код_пациент,
-                                Услуга = usl.Наименование,
+                                //Услуга = usl.Наименование,
                                 Статаус = stat.Наименование,
-                                us.Дата_и_время_выполнения,
+                                //us.Дата_и_время_выполнения,
                                 sotr.Фамилия,
                                 sotr.Имя,
                                 sotr.Отчество,
-                                us.Результат,
-                                us.Среднее_отклонение,
+                                //us.Результат,
+                                //us.Среднее_отклонение,
                             };
 
                 dgrid.ItemsSource = zakaz.ToList();
@@ -148,9 +148,9 @@ namespace MedLaboratory
                 return;
             }
             DataGridRow row = (DataGridRow)dgrid.ItemContainerGenerator.ContainerFromIndex(dgrid.SelectedIndex);
-            DataGridCell cell = dgrid.Columns[1].GetCellContent(row).Parent as DataGridCell;
+            DataGridCell cell = dgrid.Columns[0].GetCellContent(row).Parent as DataGridCell;
             userData.idOrder = Convert.ToInt32(((TextBlock)cell.Content).Text);
-            AddBioMaterial co = new AddBioMaterial();
+            ReceptionBioMaterial co = new ReceptionBioMaterial();
             co.ShowDialog();
         }
 
@@ -166,6 +166,14 @@ namespace MedLaboratory
             userData.idOrder = Convert.ToInt32(((TextBlock)cell.Content).Text);
             userData.idReport = 1;
             MultiReport co = new MultiReport();
+            co.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            dgrid.UnselectAll();
+            userData.idOrder = -1;
+            ReceptionBioMaterial co = new ReceptionBioMaterial();
             co.ShowDialog();
         }
     }

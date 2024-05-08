@@ -44,3 +44,14 @@ C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MultiReport.g.
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MultiReport.baml
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\Capcha.g.cs
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\Capcha.baml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\AddNewPatient.g.cs
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\ReceptionBioMaterial.g.cs
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\AddNewPatient.baml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\ReceptionBioMaterial.baml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\SelectServices.g.cs
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\SelectServices.baml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\zxing.dll
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\zxing.presentation.dll
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\zxing.xml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\zxing.presentation.xml
