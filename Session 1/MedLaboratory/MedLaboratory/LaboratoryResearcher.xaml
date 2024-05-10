@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedLaboratory"
         mc:Ignorable="d"
-            Title="Лаборант-иследователь" Height="720" Width="1280" Closing="Window_Closing">
+        Title="Лаборант-иследователь" Height="720" Width="1300" Closing="Window_Closing">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-            <Rectangle HorizontalAlignment="Center" Height="700" Width="1260" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
+            <Rectangle HorizontalAlignment="Center" Height="650" Width="1260" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Rectangle HorizontalAlignment="Center" Height="50" Width="1260" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
                 <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">

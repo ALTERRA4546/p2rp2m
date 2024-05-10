@@ -22,7 +22,9 @@ namespace MedLaboratory
     
         public int Код_анализатора { get; set; }
         public string Наименование { get; set; }
+        public Nullable<int> Код_услуги { get; set; }
     
+        public virtual Услуга Услуга { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Работа_анализатора> Работа_анализатора { get; set; }
     }

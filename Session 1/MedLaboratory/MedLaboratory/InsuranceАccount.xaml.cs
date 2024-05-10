@@ -62,6 +62,8 @@ namespace MedLaboratory
                 if (accoun != null)
                 {
                     accoun.Сумма = Convert.ToDecimal(summa.Text);
+                    accoun.Начало_периода_оплаты = DateTime.Now.Date;
+                    accoun.Окночание_переода_оплаты = DateTime.Now.AddDays(15).Date;
                     bd.SaveChanges();
                 }
                 else
@@ -70,6 +72,8 @@ namespace MedLaboratory
                     newAccoun.Код_бухгалтера = userData.idUser;
                     newAccoun.Код_заказа = userData.idOrder;
                     newAccoun.Сумма = Convert.ToDecimal(summa.Text);
+                    newAccoun.Начало_периода_оплаты = DateTime.Now.Date;
+                    newAccoun.Окночание_переода_оплаты = DateTime.Now.AddDays(15).Date;
                     bd.Счет_страховой.Add(newAccoun);
                     bd.SaveChanges();
                 }

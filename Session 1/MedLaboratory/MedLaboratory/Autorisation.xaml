@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedLaboratory"
         mc:Ignorable="d"
-        Title="Autorisation" Height="250" Width="440" ResizeMode="NoResize">
+        Title="Autorisation" Height="250" Width="440" ResizeMode="NoResize" Closed="Window_Closed">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
             <Rectangle HorizontalAlignment="Center" Height="190" Width="400" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />

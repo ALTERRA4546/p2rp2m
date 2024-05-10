@@ -18,6 +18,8 @@ namespace MedLaboratory
         public Nullable<int> Код_бухгалтера { get; set; }
         public Nullable<int> Код_заказа { get; set; }
         public Nullable<decimal> Сумма { get; set; }
+        public Nullable<System.DateTime> Начало_периода_оплаты { get; set; }
+        public Nullable<System.DateTime> Окночание_переода_оплаты { get; set; }
     
         public virtual Заказ Заказ { get; set; }
         public virtual Пользователи Пользователи { get; set; }

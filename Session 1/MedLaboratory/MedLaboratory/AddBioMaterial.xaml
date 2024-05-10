@@ -20,7 +20,7 @@
                 <StackPanel>
                     <WrapPanel Margin="0,0,0,10">
                         <Label Content="Код пробирки" FontFamily="Comic Sans MS" Margin="0,0,28,0" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBox x:Name="kodetest" FontFamily="Comic Sans MS" FontSize="20" Width="350" LostFocus="kodetest_LostFocus" MaxHeight="18"/>
+                        <TextBox x:Name="kodetest" FontFamily="Comic Sans MS" FontSize="20" Width="350" LostFocus="kodetest_LostFocus"/>
                     </WrapPanel>
                     <Image x:Name="barcode" Width="510" Height="150" Stretch="Fill"/>
                     <WrapPanel Margin="0,0,0,10">

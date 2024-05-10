@@ -68,7 +68,7 @@ namespace MedLaboratory
                 if (checkBio != null)
                 {
                     var kodeBio = bd.Биоматериал.Where(b => b.Наименование == biomat.SelectedItem.ToString()).FirstOrDefault();
-                    checkBio.Код_пробирки = Convert.ToUInt32(kodetest.Text);
+                    checkBio.Код_пробирки = Convert.ToInt64(kodetest.Text);
                     checkBio.Код_биоматериала = kodeBio.Код_биоматериала;
                     checkBio.Количество = Convert.ToInt32(kolvo.Text);
                     checkBio.Время_сдачи = DateTime.Now;

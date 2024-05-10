@@ -17,6 +17,7 @@ namespace MedLaboratory
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Услуга()
         {
+            this.Анализатор = new HashSet<Анализатор>();
             this.Услуги_заказа = new HashSet<Услуги_заказа>();
         }
     
@@ -25,6 +26,8 @@ namespace MedLaboratory
         public Nullable<decimal> Стоимость { get; set; }
         public Nullable<int> Срок_выполнения { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Анализатор> Анализатор { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Услуги_заказа> Услуги_заказа { get; set; }
     }

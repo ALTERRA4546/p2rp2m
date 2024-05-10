@@ -23,6 +23,7 @@
           </Key>
           <Property Name="Код анализатора" Type="int" Nullable="false" />
           <Property Name="Наименование" Type="nvarchar" MaxLength="250" />
+          <Property Name="Код услуги" Type="int" />
         </EntityType>
         <EntityType Name="Биоматериал">
           <Key>
@@ -106,7 +107,6 @@
           <Property Name="Код работы анализватора" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Код услуги заказа" Type="int" />
           <Property Name="Код анализатора" Type="int" />
-          <Property Name="Дата и время поступления заказа" Type="datetime" />
           <Property Name="Дата и время выполнения услуги" Type="datetime" />
         </EntityType>
         <EntityType Name="Сданный биоматериал">
@@ -146,6 +146,8 @@
           <Property Name="Код бухгалтера" Type="int" />
           <Property Name="Код заказа" Type="int" />
           <Property Name="Сумма" Type="money" />
+          <Property Name="Начало периода оплаты" Type="date" />
+          <Property Name="Окночание переода оплаты" Type="date" />
         </EntityType>
         <EntityType Name="Тип страхового полиса">
           <Key>
@@ -185,6 +187,18 @@
             </Principal>
             <Dependent Role="Авторизация">
               <PropertyRef Name="Код пользователя" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Анализатор_Услуга">
+          <End Role="Услуга" Type="Self.Услуга" Multiplicity="0..1" />
+          <End Role="Анализатор" Type="Self.Анализатор" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуга">
+              <PropertyRef Name="Код услуги" />
+            </Principal>
+            <Dependent Role="Анализатор">
+              <PropertyRef Name="Код услуги" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -427,6 +441,10 @@
             <End Role="Пользователи" EntitySet="Пользователи" />
             <End Role="Авторизация" EntitySet="Авторизация" />
           </AssociationSet>
+          <AssociationSet Name="FK_Анализатор_Услуга" Association="Self.FK_Анализатор_Услуга">
+            <End Role="Услуга" EntitySet="Услуга" />
+            <End Role="Анализатор" EntitySet="Анализатор" />
+          </AssociationSet>
           <AssociationSet Name="FK_Другое_Пользователи" Association="Self.FK_Другое_Пользователи">
             <End Role="Пользователи" EntitySet="Пользователи" />
             <End Role="Другое" EntitySet="Другое" />
@@ -527,6 +545,10 @@
             <End Role="Пользователи" EntitySet="Пользователи" />
             <End Role="Авторизация" EntitySet="Авторизация" />
           </AssociationSet>
+          <AssociationSet Name="FK_Анализатор_Услуга" Association="MedLaboratoryModel.FK_Анализатор_Услуга">
+            <End Role="Услуга" EntitySet="Услуга" />
+            <End Role="Анализатор" EntitySet="Анализатор" />
+          </AssociationSet>
           <AssociationSet Name="FK_Работа_анализатора_Анализатор" Association="MedLaboratoryModel.FK_Работа_анализатора_Анализатор">
             <End Role="Анализатор" EntitySet="Анализатор" />
             <End Role="Работа_анализатора" EntitySet="Работа_анализатора" />
@@ -619,6 +641,8 @@
           </Key>
           <Property Name="Код_анализатора" Type="Int32" Nullable="false" />
           <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Код_услуги" Type="Int32" />
+          <NavigationProperty Name="Услуга" Relationship="MedLaboratoryModel.FK_Анализатор_Услуга" FromRole="Анализатор" ToRole="Услуга" />
           <NavigationProperty Name="Работа_анализатора" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Анализатор" FromRole="Анализатор" ToRole="Работа_анализатора" />
         </EntityType>
         <EntityType Name="Биоматериал">
@@ -663,11 +687,11 @@
           <Property Name="Код_пациент" Type="Int32" />
           <Property Name="Статус_заказа" Type="Int32" />
           <Property Name="Время_выполнения_заказа" Type="Int32" />
+          <Property Name="Время_заказа" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Заказ_Пользователи" FromRole="Заказ" ToRole="Пользователи" />
           <NavigationProperty Name="Статус" Relationship="MedLaboratoryModel.FK_Заказ_Статус" FromRole="Заказ" ToRole="Статус" />
           <NavigationProperty Name="Счет_страховой" Relationship="MedLaboratoryModel.FK_Счет_страховой_Заказ" FromRole="Заказ" ToRole="Счет_страховой" />
           <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Заказ" FromRole="Заказ" ToRole="Услуги_заказа" />
-          <Property Name="Время_заказа" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Используемый_материал">
           <Key>
@@ -722,7 +746,6 @@
           <Property Name="Код_работы_анализватора" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Код_услуги_заказа" Type="Int32" />
           <Property Name="Код_анализатора" Type="Int32" />
-          <Property Name="Дата_и_время_поступления_заказа" Type="DateTime" Precision="3" />
           <Property Name="Дата_и_время_выполнения_услуги" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Анализатор" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Анализатор" FromRole="Работа_анализатора" ToRole="Анализатор" />
           <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа1" FromRole="Работа_анализатора" ToRole="Услуги_заказа" />
@@ -769,6 +792,8 @@
           <Property Name="Код_бухгалтера" Type="Int32" />
           <Property Name="Код_заказа" Type="Int32" />
           <Property Name="Сумма" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Начало_периода_оплаты" Type="DateTime" Precision="0" />
+          <Property Name="Окночание_переода_оплаты" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Заказ" Relationship="MedLaboratoryModel.FK_Счет_страховой_Заказ" FromRole="Счет_страховой" ToRole="Заказ" />
           <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Счет_страховой_Пользователи" FromRole="Счет_страховой" ToRole="Пользователи" />
         </EntityType>
@@ -788,6 +813,7 @@
           <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Стоимость" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="Срок_выполнения" Type="Int32" />
+          <NavigationProperty Name="Анализатор" Relationship="MedLaboratoryModel.FK_Анализатор_Услуга" FromRole="Услуга" ToRole="Анализатор" />
           <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Услуга" FromRole="Услуга" ToRole="Услуги_заказа" />
         </EntityType>
         <EntityType Name="Услуги_заказа">
@@ -818,6 +844,18 @@
             </Principal>
             <Dependent Role="Авторизация">
               <PropertyRef Name="Код_пользователя" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Анализатор_Услуга">
+          <End Type="MedLaboratoryModel.Услуга" Role="Услуга" Multiplicity="0..1" />
+          <End Type="MedLaboratoryModel.Анализатор" Role="Анализатор" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Услуга">
+              <PropertyRef Name="Код_услуги" />
+            </Principal>
+            <Dependent Role="Анализатор">
+              <PropertyRef Name="Код_услуги" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1059,6 +1097,7 @@
           <EntitySetMapping Name="Анализатор">
             <EntityTypeMapping TypeName="MedLaboratoryModel.Анализатор">
               <MappingFragment StoreEntitySet="Анализатор">
+                <ScalarProperty Name="Код_услуги" ColumnName="Код услуги" />
                 <ScalarProperty Name="Наименование" ColumnName="Наименование" />
                 <ScalarProperty Name="Код_анализатора" ColumnName="Код анализатора" />
               </MappingFragment>
@@ -1151,7 +1190,6 @@
             <EntityTypeMapping TypeName="MedLaboratoryModel.Работа_анализатора">
               <MappingFragment StoreEntitySet="Работа анализатора">
                 <ScalarProperty Name="Дата_и_время_выполнения_услуги" ColumnName="Дата и время выполнения услуги" />
-                <ScalarProperty Name="Дата_и_время_поступления_заказа" ColumnName="Дата и время поступления заказа" />
                 <ScalarProperty Name="Код_анализатора" ColumnName="Код анализатора" />
                 <ScalarProperty Name="Код_услуги_заказа" ColumnName="Код услуги заказа" />
                 <ScalarProperty Name="Код_работы_анализватора" ColumnName="Код работы анализватора" />
@@ -1193,6 +1231,8 @@
           <EntitySetMapping Name="Счет_страховой">
             <EntityTypeMapping TypeName="MedLaboratoryModel.Счет_страховой">
               <MappingFragment StoreEntitySet="Счет страховой">
+                <ScalarProperty Name="Окночание_переода_оплаты" ColumnName="Окночание переода оплаты" />
+                <ScalarProperty Name="Начало_периода_оплаты" ColumnName="Начало периода оплаты" />
                 <ScalarProperty Name="Сумма" ColumnName="Сумма" />
                 <ScalarProperty Name="Код_заказа" ColumnName="Код заказа" />
                 <ScalarProperty Name="Код_бухгалтера" ColumnName="Код бухгалтера" />

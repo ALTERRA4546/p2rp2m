@@ -50,6 +50,7 @@ namespace MedLaboratory
             public static int idReport { get; set; }
             public static int idService { get; set; }
             public static bool checkCapcha { get;set; }
+            public static int idAnalizator {  get; set; }
         }
 
         private void OnTimedEvent(object sender, EventArgs e)
@@ -202,6 +203,11 @@ namespace MedLaboratory
                 passwordVisability = false;
             }
 
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

@@ -57,29 +57,7 @@ namespace MedLaboratory
 
                 fio.Content = user.Фамилия + " " + user.Имя + " " + role.Название;
 
-                var zakaz = from z in bd.Заказ
-                            join
-                            us in bd.Услуги_заказа on z.Код_заказа equals us.Код_заказа
-                            join
-                            usl in bd.Услуга on us.Код_услуг equals usl.Код_услуги
-                            join
-                            stat in bd.Статус on us.Код_статуса_услуги equals stat.Код_статуса
-                            join
-                            sotr in bd.Пользователи on us.Код_сотрудника equals sotr.Код_пользователя
-                            select new
-                            {
-                                z.Код_заказа,
-                                us.Код_услуги_заказа,
-                                z.Код_пациент,
-                                Услуга = usl.Наименование,
-                                Статаус = stat.Наименование,
-                                us.Дата_и_время_выполнения,
-                                sotr.Фамилия,
-                                sotr.Имя,
-                                sotr.Отчество,
-                                us.Результат,
-                                us.Среднее_отклонение,
-                            };
+                var zakaz = bd.Анализатор.Select(s=> new { s.Код_анализатора, Анализатор = s.Наименование});
 
                 dgrid.ItemsSource = zakaz.ToList();
             }
@@ -148,10 +126,10 @@ namespace MedLaboratory
                 return;
             }
             DataGridRow row = (DataGridRow)dgrid.ItemContainerGenerator.ContainerFromIndex(dgrid.SelectedIndex);
-            DataGridCell cell = dgrid.Columns[1].GetCellContent(row).Parent as DataGridCell;
-            userData.idOrder = Convert.ToInt32(((TextBlock)cell.Content).Text);
-            Analizator co = new Analizator();
-            co.ShowDialog();
+            DataGridCell cell = dgrid.Columns[0].GetCellContent(row).Parent as DataGridCell;
+            userData.idAnalizator = Convert.ToInt32(((TextBlock)cell.Content).Text);
+            AnalyzerServices co = new AnalyzerServices();
+            co.Show();
             Initial();
         }
 

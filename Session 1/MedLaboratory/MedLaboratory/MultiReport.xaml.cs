@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static MedLaboratory.Autorisation;
 using System.Xml.Linq;
+using ZXing.OneD;
 
 namespace MedLaboratory
 {
@@ -34,6 +35,12 @@ namespace MedLaboratory
         {
             using (var bd = new MedLaboratoryEntities())
             {
+                bDate.Visibility = Visibility.Collapsed;
+                eDate.Visibility = Visibility.Collapsed;
+                sum.Visibility = Visibility.Collapsed;
+                this.Height = 520;
+                rg.Height = 450;
+
                 switch (userData.idReport)
                 {
                     case 1:
@@ -65,18 +72,36 @@ namespace MedLaboratory
                         dgrid.ItemsSource = report.ToList();
                         break;
                     case 2:
-                        var report1 = from z in bd.Заказ
+                        var report1 = from st in bd.Счет_страховой
                                       join
-                                        us in bd.Услуги_заказа on z.Код_заказа equals us.Код_заказа
+                                      z in bd.Заказ on st.Код_заказа equals z.Код_заказа
                                       join
-                                      uslg in bd.Услуга on us.Код_услуг equals uslg.Код_услуги
-                                      where (z.Код_заказа == userData.idOrder)
+                                      usl in bd.Услуги_заказа on z.Код_заказа equals usl.Код_заказа
+                                      join
+                                      uslug in bd.Услуга on usl.Код_услуг equals uslug.Код_услуги
+                                      join
+                                      paset in bd.Пользователи on z.Код_пациент equals paset.Код_пользователя
+                                      join
+                                      more in bd.Другое on paset.Код_пользователя equals more.Код_пользователя
+                                      join
+                                      stcom in bd.Страховая_компания on more.Код_страховой_компании equals stcom.Код_страховой_компании
+                                      where (bDate.SelectedDate.Value == null || eDate.SelectedDate.Value == null || st.Начало_периода_оплаты.Value >= bDate.SelectedDate.Value && st.Окночание_переода_оплаты <= eDate.SelectedDate.Value)
                                       select new
-                                      {
-                                          us.Код_услуг,
-                                          Услуга = uslg.Наименование,
-                                          uslg.Стоимость
+                                      { 
+                                          Страховая_компания = stcom.Название,
+                                          Период_оплаты = st.Начало_периода_оплаты + " - " + st.Окночание_переода_оплаты,
+                                          ФИО = paset.Фамилия + " " + paset.Имя + " " + paset.Отчество,
+                                          Услуга = uslug.Наименование,
+                                          uslug.Стоимость
                                       };
+
+                        bDate.Visibility = Visibility.Visible;
+                        eDate.Visibility = Visibility.Visible;
+                        sum.Visibility = Visibility.Visible;
+                        this.Height = 580;
+                        rg.Height = 520;
+                        double summ = Convert.ToDouble(report1.Sum(s => s.Стоимость));
+                        sum.Content = "Итоговая стоимость = " + summ;
 
                         dgrid.ItemsSource = report1.ToList();
 
@@ -129,14 +154,14 @@ namespace MedLaboratory
                                      where (z.Код_заказа == userData.idOrder)
                                      select new
                                      {
-                                        Дата_заказа = z.Время_заказа,
-                                        z.Код_заказа,
-                                        bio.Код_пробирки,
-                                        dop.Номер_страхового_полиса,
-                                        ФИО = pol.Фамилия + " " + pol.Имя + " " + pol.Отчество,
-                                        dop.Дата_рождения,
-                                        Услуга = uslug.Наименование,
-                                        uslug.Стоимость
+                                         Дата_заказа = z.Время_заказа,
+                                         z.Код_заказа,
+                                         bio.Код_пробирки,
+                                         dop.Номер_страхового_полиса,
+                                         ФИО = pol.Фамилия + " " + pol.Имя + " " + pol.Отчество,
+                                         dop.Дата_рождения,
+                                         Услуга = uslug.Наименование,
+                                         uslug.Стоимость
                                      };
 
                         Document doc = new Document();
@@ -174,18 +199,68 @@ namespace MedLaboratory
                         doc.Close();
                         break;
                     case 2:
-                        var report1 = from z in bd.Заказ
+                        var report1 = from st in bd.Счет_страховой
                                       join
-                                        us in bd.Услуги_заказа on z.Код_заказа equals us.Код_заказа
+                                      z in bd.Заказ on st.Код_заказа equals z.Код_заказа
                                       join
-                                      uslg in bd.Услуга on us.Код_услуг equals uslg.Код_услуги
-                                      where (z.Код_заказа == userData.idOrder)
+                                      usl in bd.Услуги_заказа on z.Код_заказа equals usl.Код_заказа
+                                      join
+                                      uslug in bd.Услуга on usl.Код_услуг equals uslug.Код_услуги
+                                      join
+                                      paset in bd.Пользователи on z.Код_пациент equals paset.Код_пользователя
+                                      join
+                                      more in bd.Другое on paset.Код_пользователя equals more.Код_пользователя
+                                      join
+                                      stcom in bd.Страховая_компания on more.Код_страховой_компании equals stcom.Код_страховой_компании
+                                      where (bDate.SelectedDate.Value == null || eDate.SelectedDate.Value == null || st.Начало_периода_оплаты.Value >= bDate.SelectedDate.Value && st.Окночание_переода_оплаты <= eDate.SelectedDate.Value)
                                       select new
                                       {
-                                          us.Код_услуг,
-                                          Услуга = uslg.Наименование,
-                                          uslg.Стоимость
+                                          Страховая_компания = stcom.Название,
+                                          Период_оплаты = st.Начало_периода_оплаты + " - " + st.Окночание_переода_оплаты,
+                                          ФИО = paset.Фамилия + " " + paset.Имя + " " + paset.Отчество,
+                                          Услуга = uslug.Наименование,
+                                          uslug.Стоимость
                                       };
+
+                        double summ = Convert.ToDouble(report1.Sum(s => s.Стоимость));
+
+                        Document doc1 = new Document();
+                        PdfWriter writer1 = PdfWriter.GetInstance(doc1, new FileStream($@"Страховая компания {DateTime.Now}.pdf".Replace(':', '_'), FileMode.Create));
+                        doc1.SetPageSize(PageSize.A4.Rotate());
+
+                        BaseFont baseFont1 = BaseFont.CreateFont("C:\\Windows\\Fonts\\arial.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+                        Font font1 = new Font(baseFont1, 12);
+
+                        doc1.Open();
+                        PdfPTable table1 = new PdfPTable(5);
+
+                        table1.AddCell(new Paragraph("Страховая компания", font1));
+                        table1.AddCell(new Paragraph("Период оплаты", font1));
+                        table1.AddCell(new Paragraph("ФИО", font1));
+                        table1.AddCell(new Paragraph("Услуги", font1));
+                        table1.AddCell(new Paragraph("Стоимость", font1));
+
+                        foreach (var item in report1)
+                        {
+                            table1.AddCell(new Paragraph(item.Страховая_компания.ToString(), font1));
+                            table1.AddCell(new Paragraph(item.Период_оплаты.ToString(), font1));
+                            table1.AddCell(new Paragraph(item.ФИО.ToString(), font1));
+                            table1.AddCell(new Paragraph(item.Услуга.ToString(), font1));
+                            table1.AddCell(new Paragraph(item.Стоимость.ToString(), font1));
+                        }
+
+                        doc1.Add(table1);
+                        Paragraph paragraph = new Paragraph($"Итоговая стоимость : {summ}", font1);
+                        doc1.Add(paragraph);
+                        doc1.Close();
+
+                        var file = new StreamWriter($"Страховая компания {DateTime.Now}.csv".Replace(':', '_'), false, Encoding.UTF8);
+                        foreach (var line in report1)
+                        {
+                            file.WriteLine(line);
+                        }
+                        file.Flush();
+                
                         break;
                     case 3:
                         var report2 = from z in bd.Заказ
@@ -211,6 +286,11 @@ namespace MedLaboratory
                 MessageBox.Show("Отчет сохранен в папке программы");
 
             }
+        }
+
+        private void bDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Initial();
         }
     }
 }

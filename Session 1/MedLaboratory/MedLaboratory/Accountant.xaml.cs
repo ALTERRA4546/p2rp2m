@@ -95,14 +95,6 @@ namespace MedLaboratory
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (dgrid.SelectedIndex < 0)
-            {
-                MessageBox.Show("Строка не была выбрана");
-                return;
-            }
-            DataGridRow row = (DataGridRow)dgrid.ItemContainerGenerator.ContainerFromIndex(dgrid.SelectedIndex);
-            DataGridCell cell = dgrid.Columns[0].GetCellContent(row).Parent as DataGridCell;
-            userData.idOrder = Convert.ToInt32(((TextBlock)cell.Content).Text);
             userData.idReport = 2;
             MultiReport co = new MultiReport();
             co.ShowDialog();

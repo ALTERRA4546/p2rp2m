@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedLaboratory"
         mc:Ignorable="d"
-        Title="Отчет" Height="520" Width="800">
+        Title="Отчет" Height="580" Width="800">
     <Grid>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-            <Rectangle HorizontalAlignment="Center" Height="450" Width="760" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
+            <Rectangle x:Name="rg" HorizontalAlignment="Center" Height="520" Width="760" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Rectangle HorizontalAlignment="Center" Height="50" Width="760" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
                 <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">
@@ -18,7 +18,14 @@
             </Grid>
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,60,10,10">
                 <StackPanel>
+                    <WrapPanel HorizontalAlignment="Center">
+                        <Label Content="Дата начала" FontFamily="Comic Sans MS" FontSize="20"/>
+                        <DatePicker x:Name="bDate" FontFamily="Comic Sans MS" FontSize="16" Margin="0,0,10,0" SelectedDateChanged="bDate_SelectedDateChanged"/>
+                        <Label Content="Дата начала" FontFamily="Comic Sans MS" FontSize="20"/>
+                        <DatePicker x:Name="eDate" FontFamily="Comic Sans MS" FontSize="16" SelectedDateChanged="bDate_SelectedDateChanged"/>
+                    </WrapPanel>
                     <DataGrid x:Name="dgrid" Margin="0,0,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" Width="740" Height="340"/>
+                    <Label x:Name="sum" Content="Label" FontFamily="Comic Sans MS" FontSize="20"/>
                     <Button Content="Распечать" HorizontalAlignment="Center" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="740" Click="Button_Click"/>
                 </StackPanel>
             </Grid>

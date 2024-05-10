@@ -23,6 +23,10 @@
       <End Role="Пользователи" EntitySet="Пользователи" />
       <End Role="Авторизация" EntitySet="Авторизация" />
     </AssociationSet>
+    <AssociationSet Name="FK_Анализатор_Услуга" Association="MedLaboratoryModel.FK_Анализатор_Услуга">
+      <End Role="Услуга" EntitySet="Услуга" />
+      <End Role="Анализатор" EntitySet="Анализатор" />
+    </AssociationSet>
     <AssociationSet Name="FK_Работа_анализатора_Анализатор" Association="MedLaboratoryModel.FK_Работа_анализатора_Анализатор">
       <End Role="Анализатор" EntitySet="Анализатор" />
       <End Role="Работа_анализатора" EntitySet="Работа_анализатора" />
@@ -115,6 +119,8 @@
     </Key>
     <Property Name="Код_анализатора" Type="Int32" Nullable="false" />
     <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Код_услуги" Type="Int32" />
+    <NavigationProperty Name="Услуга" Relationship="MedLaboratoryModel.FK_Анализатор_Услуга" FromRole="Анализатор" ToRole="Услуга" />
     <NavigationProperty Name="Работа_анализатора" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Анализатор" FromRole="Анализатор" ToRole="Работа_анализатора" />
   </EntityType>
   <EntityType Name="Биоматериал">
@@ -159,11 +165,11 @@
     <Property Name="Код_пациент" Type="Int32" />
     <Property Name="Статус_заказа" Type="Int32" />
     <Property Name="Время_выполнения_заказа" Type="Int32" />
+    <Property Name="Время_заказа" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Заказ_Пользователи" FromRole="Заказ" ToRole="Пользователи" />
     <NavigationProperty Name="Статус" Relationship="MedLaboratoryModel.FK_Заказ_Статус" FromRole="Заказ" ToRole="Статус" />
     <NavigationProperty Name="Счет_страховой" Relationship="MedLaboratoryModel.FK_Счет_страховой_Заказ" FromRole="Заказ" ToRole="Счет_страховой" />
     <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Заказ" FromRole="Заказ" ToRole="Услуги_заказа" />
-    <Property Name="Время_заказа" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Используемый_материал">
     <Key>
@@ -218,7 +224,6 @@
     <Property Name="Код_работы_анализватора" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Код_услуги_заказа" Type="Int32" />
     <Property Name="Код_анализатора" Type="Int32" />
-    <Property Name="Дата_и_время_поступления_заказа" Type="DateTime" Precision="3" />
     <Property Name="Дата_и_время_выполнения_услуги" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Анализатор" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Анализатор" FromRole="Работа_анализатора" ToRole="Анализатор" />
     <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Работа_анализатора_Услуги_заказа1" FromRole="Работа_анализатора" ToRole="Услуги_заказа" />
@@ -265,6 +270,8 @@
     <Property Name="Код_бухгалтера" Type="Int32" />
     <Property Name="Код_заказа" Type="Int32" />
     <Property Name="Сумма" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Начало_периода_оплаты" Type="DateTime" Precision="0" />
+    <Property Name="Окночание_переода_оплаты" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Заказ" Relationship="MedLaboratoryModel.FK_Счет_страховой_Заказ" FromRole="Счет_страховой" ToRole="Заказ" />
     <NavigationProperty Name="Пользователи" Relationship="MedLaboratoryModel.FK_Счет_страховой_Пользователи" FromRole="Счет_страховой" ToRole="Пользователи" />
   </EntityType>
@@ -284,6 +291,7 @@
     <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Стоимость" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="Срок_выполнения" Type="Int32" />
+    <NavigationProperty Name="Анализатор" Relationship="MedLaboratoryModel.FK_Анализатор_Услуга" FromRole="Услуга" ToRole="Анализатор" />
     <NavigationProperty Name="Услуги_заказа" Relationship="MedLaboratoryModel.FK_Услиги_заказа_Услуга" FromRole="Услуга" ToRole="Услуги_заказа" />
   </EntityType>
   <EntityType Name="Услуги_заказа">
@@ -314,6 +322,18 @@
       </Principal>
       <Dependent Role="Авторизация">
         <PropertyRef Name="Код_пользователя" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Анализатор_Услуга">
+    <End Type="MedLaboratoryModel.Услуга" Role="Услуга" Multiplicity="0..1" />
+    <End Type="MedLaboratoryModel.Анализатор" Role="Анализатор" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Услуга">
+        <PropertyRef Name="Код_услуги" />
+      </Principal>
+      <Dependent Role="Анализатор">
+        <PropertyRef Name="Код_услуги" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

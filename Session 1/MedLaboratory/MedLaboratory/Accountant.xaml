@@ -18,7 +18,6 @@
                 <WrapPanel Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Image x:Name="photo" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40"/>
                     <Label x:Name="fio" Content="Иванов Иван" Margin="10,0,20,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                    <Label x:Name="exitTime" Content="00:00" Margin="0,0,20,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                     <Label Content="Выход" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" MouseLeftButtonDown="Label_MouseLeftButtonDown"/>
                 </WrapPanel>
             </Grid>

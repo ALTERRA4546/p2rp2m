@@ -17,7 +17,6 @@ namespace MedLaboratory
         public int Код_работы_анализватора { get; set; }
         public Nullable<int> Код_услуги_заказа { get; set; }
         public Nullable<int> Код_анализатора { get; set; }
-        public Nullable<System.DateTime> Дата_и_время_поступления_заказа { get; set; }
         public Nullable<System.DateTime> Дата_и_время_выполнения_услуги { get; set; }
     
         public virtual Анализатор Анализатор { get; set; }

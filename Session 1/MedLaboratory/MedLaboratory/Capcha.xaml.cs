@@ -37,7 +37,7 @@ namespace MedLaboratory
             }
             else
             {
-                MessageBox.Show("Капча введене неврено");
+                MessageBox.Show("Капча введена неврено");
                 GenerateCaptcha();
             }
         }
