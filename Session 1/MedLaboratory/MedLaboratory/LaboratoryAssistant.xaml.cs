@@ -168,5 +168,12 @@ namespace MedLaboratory
             co.ShowDialog();
             Initial();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            userData.idReport = 4;
+            MultiReport mr = new MultiReport();
+            mr.Show();
+        }
     }
 }

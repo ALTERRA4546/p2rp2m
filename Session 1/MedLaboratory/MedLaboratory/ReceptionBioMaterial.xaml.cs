@@ -95,6 +95,7 @@ namespace MedLaboratory
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            userData.idPosetitel = -1;
             AddNewPatient ap = new AddNewPatient();
             ap.ShowDialog();
             Initial();
@@ -144,23 +145,6 @@ namespace MedLaboratory
             userData.idOrder = Convert.ToInt32(((TextBlock)cell.Content).Text);
             AddBioMaterial ab = new AddBioMaterial();
             ab.ShowDialog();
-        }
-
-        private void dgridUslug_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (dgridUser.SelectedItem != null)
-            {
-                DataGridRow row = (DataGridRow)dgridUser.ItemContainerGenerator.ContainerFromIndex(dgridUser.SelectedIndex);
-                DataGridCell cell = dgridUser.Columns[0].GetCellContent(row).Parent as DataGridCell;
-                DataGridCell cell1 = dgridUser.Columns[1].GetCellContent(row).Parent as DataGridCell;
-                DataGridCell cell2 = dgridUser.Columns[2].GetCellContent(row).Parent as DataGridCell;
-                DataGridCell cell3 = dgridUser.Columns[3].GetCellContent(row).Parent as DataGridCell;
-                string id = ((TextBlock)cell.Content).Text;
-                string f = ((TextBlock)cell1.Content).Text;
-                string n = ((TextBlock)cell2.Content).Text;
-                string o = ((TextBlock)cell3.Content).Text;
-                selectUser.Text = id + " " + f + " " + n + " " + o;
-            }
         }
 
         private void findUser_KeyDown(object sender, KeyEventArgs e)
@@ -295,6 +279,40 @@ namespace MedLaboratory
 
                 doc.Add(table);
                 doc.Close();
+
+                MessageBox.Show("Данные сохранены");
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (dgridUser.SelectedIndex < 0)
+            {
+                MessageBox.Show("Строка не была выбрана");
+                return;
+            }
+            DataGridRow row = (DataGridRow)dgridUser.ItemContainerGenerator.ContainerFromIndex(dgridUser.SelectedIndex);
+            DataGridCell cell = dgridUser.Columns[0].GetCellContent(row).Parent as DataGridCell;
+            userData.idPosetitel = Convert.ToInt32(((TextBlock)cell.Content).Text);
+            AddNewPatient ap = new AddNewPatient();
+            ap.ShowDialog();
+            Initial();
+        }
+
+        private void dgridUser_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (dgridUser.SelectedItem != null)
+            {
+                DataGridRow row = (DataGridRow)dgridUser.ItemContainerGenerator.ContainerFromIndex(dgridUser.SelectedIndex);
+                DataGridCell cell = dgridUser.Columns[0].GetCellContent(row).Parent as DataGridCell;
+                DataGridCell cell1 = dgridUser.Columns[1].GetCellContent(row).Parent as DataGridCell;
+                DataGridCell cell2 = dgridUser.Columns[2].GetCellContent(row).Parent as DataGridCell;
+                DataGridCell cell3 = dgridUser.Columns[3].GetCellContent(row).Parent as DataGridCell;
+                string id = ((TextBlock)cell.Content).Text;
+                string f = ((TextBlock)cell1.Content).Text;
+                string n = ((TextBlock)cell2.Content).Text;
+                string o = ((TextBlock)cell3.Content).Text;
+                selectUser.Text = id + " " + f + " " + n + " " + o;
             }
         }
     }

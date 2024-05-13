@@ -45,6 +45,7 @@ namespace MedLaboratory
         public static class userData
         { 
             public static int idUser {  get; set; }
+            public static int idPosetitel { get; set; }
             public static int idOrder { get; set; }
             public static int idIspolMater { get; set; }
             public static int idReport { get; set; }

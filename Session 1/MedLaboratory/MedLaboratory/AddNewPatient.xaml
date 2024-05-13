@@ -59,7 +59,7 @@
                         <Label Content="Страховая компания" FontFamily="Comic Sans MS" Margin="0,0,85,0" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <ComboBox Name="strahcompany" FontFamily="Comic Sans MS" FontSize="20" Width="280"/>
                     </WrapPanel>
-                    <Button x:Name="enterBio" Content="Внести биоматериал" HorizontalAlignment="Center" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" VerticalAlignment="Top" Width="567" Click="enterBio_Click"/>
+                    <Button x:Name="enterBio" Content="Добавить пациента" HorizontalAlignment="Center" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" VerticalAlignment="Top" Width="567" Click="enterBio_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>

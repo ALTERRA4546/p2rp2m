@@ -5,11 +5,19 @@ C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\BouncyCastle.C
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\EntityFramework.dll
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\itextsharp.dll
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\LiveCharts.dll
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\Newtonsoft.Json.dll
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\zxing.dll
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\zxing.presentation.dll
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\EntityFramework.xml
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\itextsharp.xml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\LiveCharts.pdb
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\LiveCharts.xml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\Newtonsoft.Json.xml
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\zxing.xml
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\zxing.presentation.xml
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\ru\EntityFramework.resources.dll
@@ -58,5 +66,3 @@ C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MedLaboratory.
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MedLabor.0E0D3E5A.Up2Date
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MedLaboratory.exe
 C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\obj\Debug\MedLaboratory.pdb
-C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\Newtonsoft.Json.dll
-C:\Users\King Night\Desktop\MedLaboratory\MedLaboratory\bin\Debug\Newtonsoft.Json.xml
