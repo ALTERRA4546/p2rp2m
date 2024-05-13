@@ -35,8 +35,9 @@ namespace MedLaboratory
                 bDate.Visibility = Visibility.Collapsed;
                 eDate.Visibility = Visibility.Collapsed;
                 sum.Visibility = Visibility.Collapsed;
-                this.Height = 520;
-                rg.Height = 450;
+                this.Height = 600;
+                rg.Height = 520;
+                ti2.Visibility = Visibility.Collapsed;
 
                 switch (userData.idReport)
                 {
@@ -142,6 +143,7 @@ namespace MedLaboratory
                         bDate.Visibility = Visibility.Visible;
                         eDate.Visibility = Visibility.Visible;
                         sum.Visibility = Visibility.Visible;
+                        ti2.Visibility = Visibility.Visible;
 
                         if (report3.FirstOrDefault() != null)
                         {
@@ -390,17 +392,24 @@ namespace MedLaboratory
 
                         SaveChartToImg();
 
-                        System.Drawing.Image pngImage = System.Drawing.Image.FromFile("chart.png");
-                        System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(pngImage.Width, pngImage.Height);
-                        using (System.Drawing.Graphics graphics = System.Drawing.Graphics.FromImage(bitmap))
+                        try
                         {
-                            graphics.DrawImage(pngImage, 0, 0);
+                            System.Drawing.Image pngImage = System.Drawing.Image.FromFile("chart.png");
+                            System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(pngImage.Width, pngImage.Height);
+                            using (System.Drawing.Graphics graphics = System.Drawing.Graphics.FromImage(bitmap))
+                            {
+                                graphics.DrawImage(pngImage, 0, 0);
+                            }
+                            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(bitmap, System.Drawing.Imaging.ImageFormat.Png);
+                            doc2.Add(image);
+                            pngImage.Dispose();
                         }
-                        iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(bitmap, System.Drawing.Imaging.ImageFormat.Png);
-                        doc2.Add(image);
-                        pngImage.Dispose();
+                        catch
+                        { }
                         Paragraph paragraph2 = new Paragraph($"Среднее отклонение = {Math.Round(AverageDeviation(otcl),4)} Коэффициент вариации = {Math.Round(CoefficientOfVariation(otcl),4)}%", font2);
                         doc2.Add(paragraph2);
+                        Paragraph paragraph3 = new Paragraph($" ", font2);
+                        doc2.Add(paragraph3);
 
                         PdfPTable table3 = new PdfPTable(2);
 

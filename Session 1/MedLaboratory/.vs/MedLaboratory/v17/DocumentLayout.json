@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|C:\\Users\\King Night\\Desktop\\MedLaboratory\\medlaboratory\\multireport.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\multireport.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\multireport.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\autorisation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\autorisation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|C:\\Users\\King Night\\Desktop\\MedLaboratory\\medlaboratory\\multireport.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\multireport.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|C:\\Users\\King Night\\Desktop\\MedLaboratory\\medlaboratory\\autorisation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\autorisation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\laboratoryassistant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\laboratoryassistant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\laboratoryassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\laboratoryassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +42,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "LaboratoryAssistant.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml.cs",
+              "RelativeDocumentMoniker": "MedLaboratory\\LaboratoryAssistant.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml.cs",
+              "RelativeToolTip": "MedLaboratory\\LaboratoryAssistant.xaml.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAAAKkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T17:07:26.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LaboratoryAssistant.xaml",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml",
+              "RelativeDocumentMoniker": "MedLaboratory\\LaboratoryAssistant.xaml",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\LaboratoryAssistant.xaml",
+              "RelativeToolTip": "MedLaboratory\\LaboratoryAssistant.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-13T17:06:51.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Autorisation.xaml",
               "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Autorisation.xaml",
               "RelativeDocumentMoniker": "MedLaboratory\\Autorisation.xaml",
@@ -52,21 +85,22 @@
               "RelativeDocumentMoniker": "MedLaboratory\\MultiReport.xaml.cs",
               "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\MultiReport.xaml.cs",
               "RelativeToolTip": "MedLaboratory\\MultiReport.xaml.cs",
-              "ViewState": "AQIAAIABAAAAAAAAAAAwwJABAAArAAAA",
+              "ViewState": "AQIAAI4BAAAAAAAAAAAwwJoBAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T08:56:26.205Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MultiReport.xaml",
               "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\MultiReport.xaml",
               "RelativeDocumentMoniker": "MedLaboratory\\MultiReport.xaml",
               "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\MultiReport.xaml",
               "RelativeToolTip": "MedLaboratory\\MultiReport.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-10T08:38:15.207Z"
+              "WhenOpened": "2024-05-10T08:38:15.207Z",
+              "EditorCaption": ""
             }
           ]
         },
