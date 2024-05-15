@@ -1,0 +1,42 @@
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.AssemblyReference.cache
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\AddContact.g.cs
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\DeleteContact.g.cs
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\EditContact.g.cs
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\MainWindow.g.cs
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\App.g.cs
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory_MarkupCompile.cache
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory_MarkupCompile.lref
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.exe.config
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.exe
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.pdb
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\AddContact.baml
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\DeleteContact.baml
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\EditContact.baml
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\MainWindow.baml
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.g.resources
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.Properties.Resources.resources
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.GenerateResource.cache
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.CoreCompileInputs.cache
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.exe
+C:\Users\King Night\Desktop\Новая папка\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.pdb
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.exe.config
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.exe
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.pdb
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.AssemblyReference.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\AddContact.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\DeleteContact.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\EditContact.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\MainWindow.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\App.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory_MarkupCompile.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory_MarkupCompile.lref
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\AddContact.baml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\DeleteContact.baml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\EditContact.baml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\MainWindow.baml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.g.resources
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.Properties.Resources.resources
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.GenerateResource.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.CoreCompileInputs.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.exe
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\HohrinProgramma\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.pdb

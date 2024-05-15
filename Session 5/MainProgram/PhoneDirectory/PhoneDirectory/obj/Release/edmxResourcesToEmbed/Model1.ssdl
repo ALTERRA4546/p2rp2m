@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище PhoneDirectoryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Группа контактов">
+    <Key>
+      <PropertyRef Name="Код группы компании" />
+    </Key>
+    <Property Name="Код группы компании" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Должности">
+    <Key>
+      <PropertyRef Name="Код должности" />
+    </Key>
+    <Property Name="Код должности" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Компания">
+    <Key>
+      <PropertyRef Name="Код комапнии" />
+    </Key>
+    <Property Name="Код комапнии" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Адрес" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Телефон" Type="nvarchar" MaxLength="16" />
+    <Property Name="E-mail" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Контакты">
+    <Key>
+      <PropertyRef Name="Код контакта" />
+    </Key>
+    <Property Name="Код контакта" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Фамилия" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Имя" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Отчество" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Номер телефона" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="E-mail" Type="nvarchar" MaxLength="250" />
+    <Property Name="Код компании" Type="int" />
+    <Property Name="Код должности" Type="int" />
+    <Property Name="Код группы контактов" Type="int" />
+    <Property Name="Дата рождения" Type="date" />
+    <Property Name="Фотография" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Контакты_Группа контактов">
+    <End Role="Группа контактов" Type="Self.Группа контактов" Multiplicity="0..1" />
+    <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Группа контактов">
+        <PropertyRef Name="Код группы компании" />
+      </Principal>
+      <Dependent Role="Контакты">
+        <PropertyRef Name="Код группы контактов" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Контакты_Должности">
+    <End Role="Должности" Type="Self.Должности" Multiplicity="0..1" />
+    <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Должности">
+        <PropertyRef Name="Код должности" />
+      </Principal>
+      <Dependent Role="Контакты">
+        <PropertyRef Name="Код должности" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Контакты_Компания">
+    <End Role="Компания" Type="Self.Компания" Multiplicity="0..1" />
+    <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Компания">
+        <PropertyRef Name="Код комапнии" />
+      </Principal>
+      <Dependent Role="Контакты">
+        <PropertyRef Name="Код компании" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище PhoneDirectoryModelContainer">
+    <EntitySet Name="Группа контактов" EntityType="Self.Группа контактов" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Должности" EntityType="Self.Должности" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Компания" EntityType="Self.Компания" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Контакты" EntityType="Self.Контакты" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Контакты_Группа контактов" Association="Self.FK_Контакты_Группа контактов">
+      <End Role="Группа контактов" EntitySet="Группа контактов" />
+      <End Role="Контакты" EntitySet="Контакты" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Контакты_Должности" Association="Self.FK_Контакты_Должности">
+      <End Role="Должности" EntitySet="Должности" />
+      <End Role="Контакты" EntitySet="Контакты" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Контакты_Компания" Association="Self.FK_Контакты_Компания">
+      <End Role="Компания" EntitySet="Компания" />
+      <End Role="Контакты" EntitySet="Контакты" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

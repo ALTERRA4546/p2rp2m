@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище PhoneDirectoryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Группа контактов">
+          <Key>
+            <PropertyRef Name="Код группы компании" />
+          </Key>
+          <Property Name="Код группы компании" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Должности">
+          <Key>
+            <PropertyRef Name="Код должности" />
+          </Key>
+          <Property Name="Код должности" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Компания">
+          <Key>
+            <PropertyRef Name="Код комапнии" />
+          </Key>
+          <Property Name="Код комапнии" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Название" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Адрес" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Телефон" Type="nvarchar" MaxLength="16" />
+          <Property Name="E-mail" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Контакты">
+          <Key>
+            <PropertyRef Name="Код контакта" />
+          </Key>
+          <Property Name="Код контакта" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Фамилия" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Имя" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Отчество" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Номер телефона" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="E-mail" Type="nvarchar" MaxLength="250" />
+          <Property Name="Код компании" Type="int" />
+          <Property Name="Код должности" Type="int" />
+          <Property Name="Код группы контактов" Type="int" />
+          <Property Name="Дата рождения" Type="date" />
+          <Property Name="Фотография" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Контакты_Группа контактов">
+          <End Role="Группа контактов" Type="Self.Группа контактов" Multiplicity="0..1" />
+          <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Группа контактов">
+              <PropertyRef Name="Код группы компании" />
+            </Principal>
+            <Dependent Role="Контакты">
+              <PropertyRef Name="Код группы контактов" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Контакты_Должности">
+          <End Role="Должности" Type="Self.Должности" Multiplicity="0..1" />
+          <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Должности">
+              <PropertyRef Name="Код должности" />
+            </Principal>
+            <Dependent Role="Контакты">
+              <PropertyRef Name="Код должности" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Контакты_Компания">
+          <End Role="Компания" Type="Self.Компания" Multiplicity="0..1" />
+          <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Компания">
+              <PropertyRef Name="Код комапнии" />
+            </Principal>
+            <Dependent Role="Контакты">
+              <PropertyRef Name="Код компании" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище PhoneDirectoryModelContainer">
+          <EntitySet Name="Группа контактов" EntityType="Self.Группа контактов" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Должности" EntityType="Self.Должности" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Компания" EntityType="Self.Компания" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Контакты" EntityType="Self.Контакты" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Контакты_Группа контактов" Association="Self.FK_Контакты_Группа контактов">
+            <End Role="Группа контактов" EntitySet="Группа контактов" />
+            <End Role="Контакты" EntitySet="Контакты" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Контакты_Должности" Association="Self.FK_Контакты_Должности">
+            <End Role="Должности" EntitySet="Должности" />
+            <End Role="Контакты" EntitySet="Контакты" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Контакты_Компания" Association="Self.FK_Контакты_Компания">
+            <End Role="Компания" EntitySet="Компания" />
+            <End Role="Контакты" EntitySet="Контакты" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PhoneDirectoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Группа_контактов">
+          <Key>
+            <PropertyRef Name="Код_группы_компании" />
+          </Key>
+          <Property Name="Код_группы_компании" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Контакты" Relationship="Self.FK_Контакты_Группа_контактов" FromRole="Группа_контактов" ToRole="Контакты" />
+        </EntityType>
+        <EntityType Name="Должности">
+          <Key>
+            <PropertyRef Name="Код_должности" />
+          </Key>
+          <Property Name="Код_должности" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Наименование" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Контакты" Relationship="Self.FK_Контакты_Должности" FromRole="Должности" ToRole="Контакты" />
+        </EntityType>
+        <EntityType Name="Компания">
+          <Key>
+            <PropertyRef Name="Код_комапнии" />
+          </Key>
+          <Property Name="Код_комапнии" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Название" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Адрес" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Телефон" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="E_mail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Контакты" Relationship="Self.FK_Контакты_Компания" FromRole="Компания" ToRole="Контакты" />
+        </EntityType>
+        <EntityType Name="Контакты">
+          <Key>
+            <PropertyRef Name="Код_контакта" />
+          </Key>
+          <Property Name="Код_контакта" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Фамилия" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Имя" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Отчество" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Номер_телефона" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="E_mail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Код_компании" Type="Int32" />
+          <Property Name="Код_должности" Type="Int32" />
+          <Property Name="Код_группы_контактов" Type="Int32" />
+          <Property Name="Дата_рождения" Type="DateTime" Precision="0" />
+          <Property Name="Фотография" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Группа_контактов" Relationship="Self.FK_Контакты_Группа_контактов" FromRole="Контакты" ToRole="Группа_контактов" />
+          <NavigationProperty Name="Должности" Relationship="Self.FK_Контакты_Должности" FromRole="Контакты" ToRole="Должности" />
+          <NavigationProperty Name="Компания" Relationship="Self.FK_Контакты_Компания" FromRole="Контакты" ToRole="Компания" />
+        </EntityType>
+        <Association Name="FK_Контакты_Группа_контактов">
+          <End Role="Группа_контактов" Type="Self.Группа_контактов" Multiplicity="0..1" />
+          <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Группа_контактов">
+              <PropertyRef Name="Код_группы_компании" />
+            </Principal>
+            <Dependent Role="Контакты">
+              <PropertyRef Name="Код_группы_контактов" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Контакты_Должности">
+          <End Role="Должности" Type="Self.Должности" Multiplicity="0..1" />
+          <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Должности">
+              <PropertyRef Name="Код_должности" />
+            </Principal>
+            <Dependent Role="Контакты">
+              <PropertyRef Name="Код_должности" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Контакты_Компания">
+          <End Role="Компания" Type="Self.Компания" Multiplicity="0..1" />
+          <End Role="Контакты" Type="Self.Контакты" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Компания">
+              <PropertyRef Name="Код_комапнии" />
+            </Principal>
+            <Dependent Role="Контакты">
+              <PropertyRef Name="Код_компании" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PhoneDirectoryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Группа_контактов" EntityType="Self.Группа_контактов" />
+          <EntitySet Name="Должности" EntityType="Self.Должности" />
+          <EntitySet Name="Компания" EntityType="Self.Компания" />
+          <EntitySet Name="Контакты" EntityType="Self.Контакты" />
+          <AssociationSet Name="FK_Контакты_Группа_контактов" Association="Self.FK_Контакты_Группа_контактов">
+            <End Role="Группа_контактов" EntitySet="Группа_контактов" />
+            <End Role="Контакты" EntitySet="Контакты" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Контакты_Должности" Association="Self.FK_Контакты_Должности">
+            <End Role="Должности" EntitySet="Должности" />
+            <End Role="Контакты" EntitySet="Контакты" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Контакты_Компания" Association="Self.FK_Контакты_Компания">
+            <End Role="Компания" EntitySet="Компания" />
+            <End Role="Контакты" EntitySet="Контакты" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PhoneDirectoryModelContainer" CdmEntityContainer="PhoneDirectoryEntities">
+          <EntitySetMapping Name="Группа_контактов">
+            <EntityTypeMapping TypeName="PhoneDirectoryModel.Группа_контактов">
+              <MappingFragment StoreEntitySet="Группа контактов">
+                <ScalarProperty Name="Код_группы_компании" ColumnName="Код группы компании" />
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Должности">
+            <EntityTypeMapping TypeName="PhoneDirectoryModel.Должности">
+              <MappingFragment StoreEntitySet="Должности">
+                <ScalarProperty Name="Код_должности" ColumnName="Код должности" />
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Компания">
+            <EntityTypeMapping TypeName="PhoneDirectoryModel.Компания">
+              <MappingFragment StoreEntitySet="Компания">
+                <ScalarProperty Name="Код_комапнии" ColumnName="Код комапнии" />
+                <ScalarProperty Name="Название" ColumnName="Название" />
+                <ScalarProperty Name="Адрес" ColumnName="Адрес" />
+                <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+                <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Контакты">
+            <EntityTypeMapping TypeName="PhoneDirectoryModel.Контакты">
+              <MappingFragment StoreEntitySet="Контакты">
+                <ScalarProperty Name="Код_контакта" ColumnName="Код контакта" />
+                <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+                <ScalarProperty Name="Имя" ColumnName="Имя" />
+                <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+                <ScalarProperty Name="Номер_телефона" ColumnName="Номер телефона" />
+                <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+                <ScalarProperty Name="Код_компании" ColumnName="Код компании" />
+                <ScalarProperty Name="Код_должности" ColumnName="Код должности" />
+                <ScalarProperty Name="Код_группы_контактов" ColumnName="Код группы контактов" />
+                <ScalarProperty Name="Дата_рождения" ColumnName="Дата рождения" />
+                <ScalarProperty Name="Фотография" ColumnName="Фотография" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

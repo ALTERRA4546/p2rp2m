@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DCC71F42-602C-454F-9DC9-6C63953FE442}|UnitTest\\UnitTest.csproj|c:\\users\\king night\\documents\\github repository\\p2rp2m\\session 5\\hohrinprogramma\\phonedirectory\\unittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCC71F42-602C-454F-9DC9-6C63953FE442}|UnitTest\\UnitTest.csproj|solutionrelative:unittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCB8D9E8-9374-4838-AFE6-F95BD8FBBDFA}|PhoneDirectory\\PhoneDirectory.csproj|C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\phonedirectory\\addcontact.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB8D9E8-9374-4838-AFE6-F95BD8FBBDFA}|PhoneDirectory\\PhoneDirectory.csproj|solutionrelative:phonedirectory\\addcontact.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCB8D9E8-9374-4838-AFE6-F95BD8FBBDFA}|PhoneDirectory\\PhoneDirectory.csproj|C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\phonedirectory\\deletecontact.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB8D9E8-9374-4838-AFE6-F95BD8FBBDFA}|PhoneDirectory\\PhoneDirectory.csproj|solutionrelative:phonedirectory\\deletecontact.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCB8D9E8-9374-4838-AFE6-F95BD8FBBDFA}|PhoneDirectory\\PhoneDirectory.csproj|C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\phonedirectory\\editcontact.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB8D9E8-9374-4838-AFE6-F95BD8FBBDFA}|PhoneDirectory\\PhoneDirectory.csproj|solutionrelative:phonedirectory\\editcontact.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\UnitTest\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "UnitTest\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\UnitTest\\UnitTest1.cs",
+              "RelativeToolTip": "UnitTest\\UnitTest1.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAYwDoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T12:36:31.005Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddContact.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\PhoneDirectory\\AddContact.xaml.cs",
+              "RelativeDocumentMoniker": "PhoneDirectory\\AddContact.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\PhoneDirectory\\AddContact.xaml.cs",
+              "RelativeToolTip": "PhoneDirectory\\AddContact.xaml.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwDAAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T18:32:52.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditContact.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\PhoneDirectory\\EditContact.xaml.cs",
+              "RelativeDocumentMoniker": "PhoneDirectory\\EditContact.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\PhoneDirectory\\EditContact.xaml.cs",
+              "RelativeToolTip": "PhoneDirectory\\EditContact.xaml.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAwwDAAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T18:08:19.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeleteContact.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\PhoneDirectory\\DeleteContact.xaml.cs",
+              "RelativeDocumentMoniker": "PhoneDirectory\\DeleteContact.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 5\\HohrinProgramma\\PhoneDirectory\\PhoneDirectory\\DeleteContact.xaml.cs",
+              "RelativeToolTip": "PhoneDirectory\\DeleteContact.xaml.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAkwE8AAACVAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T18:06:20.868Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

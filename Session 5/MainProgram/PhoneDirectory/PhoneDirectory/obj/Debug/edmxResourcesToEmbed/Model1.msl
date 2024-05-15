@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PhoneDirectoryModelContainer" CdmEntityContainer="PhoneDirectoryEntities">
+    <EntitySetMapping Name="Группа_контактов">
+      <EntityTypeMapping TypeName="PhoneDirectoryModel.Группа_контактов">
+        <MappingFragment StoreEntitySet="Группа контактов">
+          <ScalarProperty Name="Код_группы_компании" ColumnName="Код группы компании" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Должности">
+      <EntityTypeMapping TypeName="PhoneDirectoryModel.Должности">
+        <MappingFragment StoreEntitySet="Должности">
+          <ScalarProperty Name="Код_должности" ColumnName="Код должности" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Компания">
+      <EntityTypeMapping TypeName="PhoneDirectoryModel.Компания">
+        <MappingFragment StoreEntitySet="Компания">
+          <ScalarProperty Name="Код_комапнии" ColumnName="Код комапнии" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Адрес" ColumnName="Адрес" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Контакты">
+      <EntityTypeMapping TypeName="PhoneDirectoryModel.Контакты">
+        <MappingFragment StoreEntitySet="Контакты">
+          <ScalarProperty Name="Код_контакта" ColumnName="Код контакта" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="Номер_телефона" ColumnName="Номер телефона" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="Код_компании" ColumnName="Код компании" />
+          <ScalarProperty Name="Код_должности" ColumnName="Код должности" />
+          <ScalarProperty Name="Код_группы_контактов" ColumnName="Код группы контактов" />
+          <ScalarProperty Name="Дата_рождения" ColumnName="Дата рождения" />
+          <ScalarProperty Name="Фотография" ColumnName="Фотография" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
