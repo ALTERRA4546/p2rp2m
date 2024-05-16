@@ -1,0 +1,31 @@
+﻿<Window x:Class="MedLaboratory.MaterialСonsumptionMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedLaboratory"
+        mc:Ignorable="d"
+            Title="Материал" Height="520" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <Rectangle HorizontalAlignment="Center" Height="450" Width="760" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Rectangle HorizontalAlignment="Center" Height="50" Width="760" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
+                <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">
+                    <Image Height="40" Width="40" Source="/logo.png"/>
+                    <Label Content="Материал" Margin="10,0,10,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </WrapPanel>
+            </Grid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,60,10,10">
+                <StackPanel>
+                    <DataGrid x:Name="dgrid" Margin="0,0,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" Width="740" Height="330"/>
+                    <WrapPanel HorizontalAlignment="Center">
+                        <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,0,10,0" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="220" Click="Button_Click_1"/>
+                        <Button Content="Изменить" HorizontalAlignment="Center" Margin="0,0,10,0" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="220" Click="Button_Click"/>
+                        <Button Content="Удалить" HorizontalAlignment="Center" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="220" Click="Button_Click_2"/>
+                    </WrapPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

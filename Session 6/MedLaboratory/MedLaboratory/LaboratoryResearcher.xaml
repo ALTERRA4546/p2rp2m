@@ -1,0 +1,35 @@
+﻿<Window x:Class="MedLaboratory.LaboratoryResearcher"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedLaboratory"
+        mc:Ignorable="d"
+        Title="Лаборант-иследователь" Height="720" Width="1300" Closing="Window_Closing" ResizeMode="NoResize">
+    <Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <Rectangle HorizontalAlignment="Center" Height="650" Width="1260" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Rectangle HorizontalAlignment="Center" Height="50" Width="1260" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
+                <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">
+                    <Image Height="40" Width="40" Source="/logo.png"/>
+                    <Label Content="Главное окно" Margin="10,0,10,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </WrapPanel>
+                <WrapPanel Margin="10,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Image x:Name="photo" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40"/>
+                    <Label x:Name="fio" Content="Иванов Иван" Margin="10,0,20,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label x:Name="exitTime" Content="00:00" Margin="0,0,20,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label Content="Выход" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" MouseLeftButtonDown="Label_MouseLeftButtonDown"/>
+                </WrapPanel>
+            </Grid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,60,10,10">
+                <StackPanel>
+                    <DataGrid x:Name="dgrid" Margin="0,0,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" Width="1240" Height="540"/>
+                    <WrapPanel>
+                        <Button Content="Работа с анализатором" HorizontalAlignment="Left" Margin="0,0,10,0" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="340" Click="Button_Click"/>
+                    </WrapPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

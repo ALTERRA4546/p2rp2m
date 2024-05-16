@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9FBE352F-FB83-4832-8AC5-B7FB27FCF6AE}|UnitTest\\UnitTest.csproj|c:\\users\\king night\\desktop\\medlaboratory\\unittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FBE352F-FB83-4832-8AC5-B7FB27FCF6AE}|UnitTest\\UnitTest.csproj|solutionrelative:unittest\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\autorisation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\autorisation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|c:\\users\\king night\\desktop\\medlaboratory\\medlaboratory\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C2053999-C9E6-4DD4-A64A-91836CA93A0B}|MedLaboratory\\MedLaboratory.csproj|solutionrelative:medlaboratory\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\App.config",
+              "RelativeDocumentMoniker": "MedLaboratory\\App.config",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\App.config",
+              "RelativeToolTip": "MedLaboratory\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAB9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-16T07:38:58.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Autorisation.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Autorisation.xaml.cs",
+              "RelativeDocumentMoniker": "MedLaboratory\\Autorisation.xaml.cs",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\MedLaboratory\\Autorisation.xaml.cs",
+              "RelativeToolTip": "MedLaboratory\\Autorisation.xaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowCgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T07:31:56.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\UnitTest\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "UnitTest\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\King Night\\Desktop\\MedLaboratory\\UnitTest\\UnitTest1.cs",
+              "RelativeToolTip": "UnitTest\\UnitTest1.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAIwDoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T06:54:04.272Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
