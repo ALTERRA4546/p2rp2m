@@ -23,3 +23,28 @@ C:\Users\King Night\Desktop\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDir.9E7
 C:\Users\King Night\Desktop\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.exe
 C:\Users\King Night\Desktop\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.pdb
 C:\Users\King Night\Desktop\PhoneDirectory\PhoneDirectory\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.exe.config
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.exe
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\PhoneDirectory.pdb
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\EntityFramework.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\EntityFramework.xml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.AssemblyReference.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\AddContacts.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\MainWindow.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\App.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory_Content.g.cs
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory_MarkupCompile.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory_MarkupCompile.lref
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\AddContacts.baml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\MainWindow.baml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.g.resources
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.Properties.Resources.resources
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.GenerateResource.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.csproj.CoreCompileInputs.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDir.9E7E5903.Up2Date
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.exe
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 5\MainProgramm\PhoneDirectory\PhoneDirectory\obj\Debug\PhoneDirectory.pdb
