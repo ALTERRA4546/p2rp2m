@@ -1,0 +1,70 @@
+﻿<Window x:Class="MedLaboratory.MultiReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:MedLaboratory"
+        mc:Ignorable="d"
+        Title="Отчет" Height="610" Width="800">
+    <Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <Rectangle x:Name="rg" HorizontalAlignment="Center" Height="560" Width="760" VerticalAlignment="Center" Stroke="#76e383" RadiusX="0" RadiusY="0" />
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Rectangle HorizontalAlignment="Center" Height="50" Width="760" VerticalAlignment="Top" Fill="#76e383" RadiusX="0" RadiusY="0"/>
+                <WrapPanel VerticalAlignment="Center" Margin="10,0,10,0">
+                    <Image Height="40" Width="40" Source="/logo.png"/>
+                    <Label Content="Отчет" Margin="10,0,10,0" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </WrapPanel>
+            </Grid>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,10,10">
+                <TabControl HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <TabItem>
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="3" FontFamily="Comic Sans MS">Отчеты</TextBlock>
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <StackPanel>
+                                    <WrapPanel HorizontalAlignment="Center">
+                                        <Label Content="Дата начала" FontFamily="Comic Sans MS" FontSize="20"/>
+                                        <DatePicker x:Name="bDate" FontFamily="Comic Sans MS" FontSize="16" Margin="0,0,10,0" SelectedDateChanged="bDate_SelectedDateChanged"/>
+                                        <Label Content="Дата начала" FontFamily="Comic Sans MS" FontSize="20"/>
+                                        <DatePicker x:Name="eDate" FontFamily="Comic Sans MS" FontSize="16" SelectedDateChanged="bDate_SelectedDateChanged"/>
+                                    </WrapPanel>
+                                    <DataGrid x:Name="dgrid" Margin="0,0,0,10" d:ItemsSource="{d:SampleData ItemCount=5}" Width="740" Height="340"/>
+                                    <Label x:Name="sum" Content="Label" FontFamily="Comic Sans MS" FontSize="20"/>
+                                </StackPanel>
+                            </Grid>
+                        </TabItem.Content>
+                    </TabItem>
+                    <TabItem x:Name="ti2">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="3" FontFamily="Comic Sans MS">График</TextBlock>
+                            </StackPanel>
+                        </TabItem.Header>
+                        <TabItem.Content>
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <StackPanel>
+                                    <Label x:Name="result" Content="Labe" FontSize="20" FontFamily="Comic Sans MS"/>
+                                    <lvc:CartesianChart x:Name="chart" Series="{Binding SeriesCollection}" LegendLocation="Right" Width="740" Height="390">
+                                        <lvc:CartesianChart.AxisX>
+                                            <lvc:Axis Title="X" Labels="{Binding BarLabels}" Foreground="Black"/>
+                                        </lvc:CartesianChart.AxisX>
+                                        <lvc:CartesianChart.AxisY>
+                                            <lvc:Axis Title="Y" LabelFormatter="{Binding Formatter}" Foreground="Black"/>
+                                        </lvc:CartesianChart.AxisY>
+                                    </lvc:CartesianChart>
+                                </StackPanel>
+                            </Grid>
+                        </TabItem.Content>
+                    </TabItem>
+                </TabControl>
+                <Button Content="Распечать" HorizontalAlignment="Center" Background="#76e383" FontFamily="Comic Sans MS" FontSize="16" Width="740" Click="Button_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
