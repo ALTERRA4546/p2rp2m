@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\King Night\\Desktop\\SimplexMethod\\",
+  "WorkspaceRootPath": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 6\\SimplexMethod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1946B4F-AE72-48EE-8260-934684875969}|SimplexMethod\\SimplexMethod.csproj|c:\\users\\king night\\desktop\\simplexmethod\\simplexmethod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1946B4F-AE72-48EE-8260-934684875969}|SimplexMethod\\SimplexMethod.csproj|solutionrelative:simplexmethod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1946B4F-AE72-48EE-8260-934684875969}|SimplexMethod\\SimplexMethod.csproj|c:\\users\\king night\\documents\\github repository\\p2rp2m\\session 6\\simplexmethod\\simplexmethod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1946B4F-AE72-48EE-8260-934684875969}|SimplexMethod\\SimplexMethod.csproj|solutionrelative:simplexmethod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1946B4F-AE72-48EE-8260-934684875969}|SimplexMethod\\SimplexMethod.csproj|C:\\Users\\King Night\\Desktop\\SimplexMethod\\simplexmethod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D1946B4F-AE72-48EE-8260-934684875969}|SimplexMethod\\SimplexMethod.csproj|solutionrelative:simplexmethod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D1946B4F-AE72-48EE-8260-934684875969}|SimplexMethod\\SimplexMethod.csproj|c:\\users\\king night\\documents\\github repository\\p2rp2m\\session 6\\simplexmethod\\simplexmethod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1946B4F-AE72-48EE-8260-934684875969}|SimplexMethod\\SimplexMethod.csproj|solutionrelative:simplexmethod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,26 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\SimplexMethod\\SimplexMethod\\Form1.cs",
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 6\\SimplexMethod\\SimplexMethod\\Form1.cs",
               "RelativeDocumentMoniker": "SimplexMethod\\Form1.cs",
-              "ToolTip": "C:\\Users\\King Night\\Desktop\\SimplexMethod\\SimplexMethod\\Form1.cs",
+              "ToolTip": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 6\\SimplexMethod\\SimplexMethod\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "SimplexMethod\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T07:46:05.907Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 6\\SimplexMethod\\SimplexMethod\\Form1.cs",
+              "RelativeDocumentMoniker": "SimplexMethod\\Form1.cs",
+              "ToolTip": "C:\\Users\\King Night\\Documents\\GitHub Repository\\p2rp2m\\Session 6\\SimplexMethod\\SimplexMethod\\Form1.cs",
               "RelativeToolTip": "SimplexMethod\\Form1.cs",
               "ViewState": "AQIAAJIAAAAAAAAAAAAAAKsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T09:24:50.364Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\King Night\\Desktop\\SimplexMethod\\SimplexMethod\\Form1.cs",
-              "RelativeDocumentMoniker": "SimplexMethod\\Form1.cs",
-              "ToolTip": "C:\\Users\\King Night\\Desktop\\SimplexMethod\\SimplexMethod\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "SimplexMethod\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T09:21:34.752Z"
             }
           ]
         },

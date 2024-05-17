@@ -78,7 +78,7 @@
             this.Controls.Add(this.zedGraphControl1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Грфический метод";
             this.ResumeLayout(false);
 
         }

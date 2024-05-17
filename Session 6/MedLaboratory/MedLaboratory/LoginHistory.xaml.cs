@@ -27,11 +27,18 @@ namespace MedLaboratory
 
         private void Initial()
         {
-            using (var bd = new MedLaboratoryEntities())
+            try
             {
-                var history = bd.История.Select( s=> new { s.Код_истории, s.Код_пользователя, s.Дата_и_время_входа, s.IP_адрес });
+                using (var bd = new MedLaboratoryEntities())
+                {
+                    var history = bd.История.Select(s => new { s.Код_истории, s.Код_пользователя, s.Дата_и_время_входа, s.IP_адрес });
 
-                dgrid.ItemsSource = history.ToList();
+                    dgrid.ItemsSource = history.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
