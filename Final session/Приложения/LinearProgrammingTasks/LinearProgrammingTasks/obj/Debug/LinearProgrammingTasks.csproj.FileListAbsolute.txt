@@ -1,0 +1,56 @@
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\LinearProgrammingTasks.exe.config
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\LinearProgrammingTasks.exe
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\LinearProgrammingTasks.pdb
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\Microsoft.Solver.Foundation.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\Microsoft.Solver.Foundation.xml
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.csproj.AssemblyReference.cache
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.Form1.resources
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.Properties.Resources.resources
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.csproj.GenerateResource.cache
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.csproj.CoreCompileInputs.cache
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearPr.4D79833E.Up2Date
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.exe
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.pdb
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\ZedGraph.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\ZedGraph.xml
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\King Night\Desktop\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\LinearProgrammingTasks.exe.config
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\LinearProgrammingTasks.exe
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\LinearProgrammingTasks.pdb
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\Microsoft.Solver.Foundation.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\ZedGraph.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\Microsoft.Solver.Foundation.xml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\ZedGraph.xml
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.csproj.AssemblyReference.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.Form1.resources
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.Properties.Resources.resources
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.csproj.GenerateResource.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.csproj.CoreCompileInputs.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearPr.4D79833E.Up2Date
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.exe
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\LinearProgrammingTasks\LinearProgrammingTasks\obj\Debug\LinearProgrammingTasks.pdb

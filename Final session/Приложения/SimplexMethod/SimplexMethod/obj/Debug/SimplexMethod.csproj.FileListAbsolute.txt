@@ -1,0 +1,20 @@
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\bin\Debug\SimplexMethod.exe.config
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\bin\Debug\SimplexMethod.exe
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\bin\Debug\SimplexMethod.pdb
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.csproj.AssemblyReference.cache
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.Form1.resources
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.Properties.Resources.resources
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.csproj.GenerateResource.cache
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.csproj.CoreCompileInputs.cache
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.exe
+C:\Users\King Night\Desktop\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.pdb
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\bin\Debug\SimplexMethod.exe.config
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\bin\Debug\SimplexMethod.exe
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\bin\Debug\SimplexMethod.pdb
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.csproj.AssemblyReference.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.Form1.resources
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.Properties.Resources.resources
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.csproj.GenerateResource.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.csproj.CoreCompileInputs.cache
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.exe
+C:\Users\King Night\Documents\GitHub Repository\p2rp2m\Session 6\SimplexMethod\SimplexMethod\obj\Debug\SimplexMethod.pdb
